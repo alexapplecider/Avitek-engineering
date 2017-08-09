@@ -2,10 +2,133 @@
 @import "global/scaffolding";
 @import "global/fonts";
 @import "global/general";
+a:hover {
+    color: #1597cf;
+}
+
 // HEADER
+.header {
+    min-height: 55rem;
+    background: url(../img/header-bg.jpg) center center no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    & .container-full {
+        border-bottom: 1px solid rgba(248, 248, 248, .2);
+        padding-bottom: 0.8rem;
+    }
+    &__text h1 {
+        font-size: 4.8rem;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        margin-top: 7rem;
+    }
+    &__text h2 {
+        margin: 0;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 300;
+    }
+    &__servises {
+        margin-top: 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &-link {
+            max-width: 150px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem; // &:hover {
+            //     color: #1597cf;
+            // }
+            & img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.top-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 8.8rem;
+    padding-top: 2rem;
+    &__logo {
+        width: 100%;
+        max-width: 9rem;
+        max-height: 47px;
+    }
+    &__nav {
+        max-width: 640px;
+        width: 100%;
+    }
+    &__contacts {
+        max-width: 20rem;
+        text-align: right;
+        font-family: $f-main;
+        font-size: 2rem;
+        &-mail {
+            text-decoration: underline;
+            font-size: 1.5rem;
+        } // &-number:hover,
+        // &-mail:hover {
+        //     color: #1597cf;
+        // }
+    }
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    &__item-link {
+        font-family: $f-main;
+        font-size: 1.5rem;
+    }
+    &__item {
+        position: relative;
+        &:first-child:hover .drop-menu {
+            display: flex;
+            top: 95%;
+            opacity: 1;
+            transition: .5s opacity;
+            
+        }
+    }
+}
+
+.drop-menu {
+    opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 430px;
+    position: absolute;
+    top: -9999px;
+    left: -65%;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border-top: 25px solid transparent !important;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 155px;
+        height: 215px;
+        line-height: 3.4rem;
+        &--second-block {
+            padding-left: 0;
+            width: 155px;
+            height: 215px;
+        }
+    }
+}
+
 // HEADER
 // MAIN
 // MAIN
 // FOOTER
-// FOOTER 
- 
+// FOOTER
