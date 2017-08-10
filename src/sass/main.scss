@@ -15,6 +15,9 @@ a:hover {
     & .container-full {
         border-bottom: 1px solid rgba(248, 248, 248, .2);
         padding-bottom: 0.8rem;
+        @media (max-width: $tablet) {
+            padding-bottom: 0;
+        }
     }
     &__text h1 {
         font-size: 4.8rem;
@@ -22,29 +25,58 @@ a:hover {
         font-weight: 700;
         margin: 0;
         margin-top: 7rem;
+        @media (max-width: $tablet) {
+            font-size: 4rem;
+            margin-top: 5rem;
+        }
+        @media (max-width: $mobile) {
+            font-size: 1.8rem;
+            margin-top: 5rem;
+        }
     }
     &__text h2 {
         margin: 0;
         font-size: 2rem;
         text-align: center;
         font-weight: 300;
+        @media (max-width: $mobile) {
+            font-size: 1.5rem;
+        }
     }
     &__servises {
         margin-top: 7rem;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-end;
+        @media (max-width: $tablet) {
+            justify-content: space-around;
+            align-items: baseline;
+            margin-top: 5rem;
+        }
         &-link {
             max-width: 150px;
             width: 100%;
             text-align: center;
-            font-size: 1.5rem; // &:hover {
-            //     color: #1597cf;
-            // }
+            font-size: 1.5rem;
+            @media (max-width: $tablet) {
+                font-size: 1.3rem;
+                max-width: 100px;
+                word-wrap: break-word;
+                margin-bottom: 2rem;
+            }
             & img {
                 display: block;
                 margin: 0 auto;
-                margin-bottom: 30px;
+                margin-bottom: 3rem;
+                @media (max-width: $tablet) {
+                    max-width: 5rem;
+                    max-height: 5rem;
+                }
+                @media (max-width: $mobile) {
+                    max-width: 4rem;
+                    max-height: 4rem;
+                }
             }
         }
     }
@@ -56,61 +88,95 @@ a:hover {
     justify-content: space-between;
     min-height: 8.8rem;
     padding-top: 2rem;
+    @media (max-width: $tablet) {
+        padding-top: 0;
+    }
     &__logo {
         width: 100%;
         max-width: 9rem;
-        max-height: 47px;
+        max-height: 4.7rem;
     }
     &__nav {
-        max-width: 640px;
+        max-width: 64rem;
         width: 100%;
+        margin: 0 1.5rem;
+        @media (max-width: $tablet) {
+            max-width: 25rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 600px) {
+            display: none;
+        }
     }
     &__contacts {
-        max-width: 20rem;
+        max-width: 23rem;
+        width: 100%;
         text-align: right;
         font-family: $f-main;
         font-size: 2rem;
+        @media (max-width: $tablet) {
+            max-width: 15rem;
+            font-size: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            display: none;
+        }
         &-mail {
             text-decoration: underline;
-            font-size: 1.5rem;
-        } // &-number:hover,
-        // &-mail:hover {
-        //     color: #1597cf;
-        // }
+            @media (max-width: $tablet) {
+                font-size: 1.3rem;
+            }
+        }
     }
 }
 
 .nav-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     &__item-link {
         font-family: $f-main;
         font-size: 1.5rem;
     }
     &__item {
         position: relative;
+        @media (max-width: $tablet) {
+            margin-bottom: 3.5rem;
+        }
         &:first-child:hover .drop-menu {
             display: flex;
-            top: 95%;
+            top: 200%;
             opacity: 1;
             transition: .5s opacity;
-            
         }
     }
 }
 
 .drop-menu {
-    opacity: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 430px;
     position: absolute;
     top: -9999px;
     left: -65%;
+    display: flex;
+    justify-content: space-around;
+    width: 43rem;
     background-color: #000000;
     color: #ffffff;
     font-size: 1.5rem;
-    border-top: 25px solid transparent !important;
+    opacity: 0;
+    z-index: 50;
+    @media (max-width: $tablet) {
+        font-size: 1.3rem;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: -10%;
+        left: 0%;
+        display: block;
+        width: 135px;
+        height: 25px;
+        background-color: transparent;
+    }
     &__list {
         display: flex;
         flex-direction: column;
@@ -123,6 +189,52 @@ a:hover {
             padding-left: 0;
             width: 155px;
             height: 215px;
+        }
+    }
+}
+
+.mobile-menu {
+    width: 5rem;
+    &__btn {
+        display: none;
+        @media (max-width: 600px) {
+            display: block;
+        }
+        cursor: pointer;
+        font-size: 3rem;
+    }
+    &-nav-list {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60vw;
+        height: 100vh;
+        background-color: #ffffff;
+        font-size: 1.5rem;
+        color: #000000;
+        text-align: left;
+        padding-top: 3rem;
+        padding-left: 3.6rem;
+        &--show {
+            display: block;
+        }
+        & .mobile-menu__btn--open {
+            position: absolute;
+            top: 0%;
+            right: 5%;
+            font-size: 1.5rem;
+            padding: 10px;
+        }
+        &__item {
+            margin-bottom: 3rem;
+        }
+    }
+    &-drop {
+        display: none;
+        margin-top: 10px;
+        &__list-item {
+            line-height: 30px;
         }
     }
 }

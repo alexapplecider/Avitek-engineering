@@ -58,7 +58,7 @@ gulp.task('sass', function () { // Создаем таск SASS
 // Минификация JS
 gulp.task('scripts', function () {
     return gulp.src([ // Берем JS файлы для минификации
-            'src/js/modules/*.js'
+            'src/js/*.js'
         ])
         .pipe(concat('main.js'))
         .pipe(uglify()) // Сжимаем JS файл

@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная</title>
   <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     <div class="container-full">
       <div class="container">
         <div class="top-line">
-          <a class="top-line__logo" href="">
+          <a class="top-line__logo" href="#">
            <img src="img/header-logo.png" alt="logo Avitek engeneering" >
           </a>
           <nav class="top-line__nav">
@@ -46,22 +48,56 @@
           <div class="top-line__contacts">
             <a class="top-line__contacts-number" href="tel:74996545567">+7 499 654-55-67</a>
             <a class="top-line__contacts-mail" href="mailto:info@avitekengineering.ru">info@avitekengineering.ru</a></div>
+
+          <div class="mobile-menu">
+            <a class="mobile-menu__btn" onclick="return showMenu;">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+            <ul class="mobile-menu-nav-list">
+              <div>
+                <a class="mobile-menu__btn mobile-menu__btn--open" onclick="return showMenu;">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+              <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Услуги</a>
+                <div class="mobile-menu-drop">
+                  <ul class="mobile-menu-drop__list">
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Кондиционирование</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Вентиляция</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Отопление</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Пожарные системы</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Водоснабжение</a></li>
+                  </ul>
+                  <ul class="mobile-menu-drop__list mobile-menu-drop__list--second-block">
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">VRF/VRV Системы</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Фанкойлы и чиллеры</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Прецизионное кондиционирование</a></li>
+                  </ul>
+                </div>
+                </li>
+                <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">О компании</a></li>
+                <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Объекты</a></li>
+                <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Отзывы</a></li>
+                <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Новости</a></li>
+                <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Контакты</a></li>
+            </ul>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="header__text">
-        <h1>Инженерные системы под ключ</h1>
-        <h2>специализируемся на проектировании и монтаже свыше 7 лет</h2>
+      <div class="container">
+        <div class="header__text">
+          <h1>Инженерные системы под ключ</h1>
+          <h2>специализируемся на проектировании и монтаже свыше 7 лет</h2>
+        </div>
+        <div class="header__servises">
+          <a class="header__servises-link" href="#"><img src="img/icons/servises-1.png" alt="">Кондиционирование</a>
+          <a class="header__servises-link" href="#"><img src="img/icons/servises-2.png" alt="">Вентиляция</a>
+          <a class="header__servises-link" href="#"><img src="img/icons/servises-3.png" alt="">Отопление</a>
+          <a class="header__servises-link" href="#"><img src="img/icons/servises-4.png" alt="">Пожарные системы</a>
+          <a class="header__servises-link" href="#"><img src="img/icons/servises-5.png" alt="">Водоснабжение</a>
+        </div>
       </div>
-      <div class="header__servises">
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-1.png" alt="">Кондиционирование</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-2.png" alt="">Вентиляция</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-3.png" alt="">Отопление</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-4.png" alt="">Пожарные системы</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-5.png" alt="">Водоснабжение</a>
-      </div>
-    </div>
 
   </header>
 
@@ -72,6 +108,17 @@
   <footer>
 
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <script type="text/javascript">
+    var mobMenuButton = $('.mobile-menu__btn'),
+      mobMenuBlock = $('.mobile-menu-nav-list');
+    $('.mobile-menu__btn').on('click', function (event) {
+      mobMenuBlock.toggleClass('mobile-menu-nav-list--show');
+    });
+  </script>
+
 
 </body>
 

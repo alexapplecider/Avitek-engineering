@@ -36,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/Stilon/Evromed/issues"
   },
-  "homepage": "https://github.com/Stilon/Evromed#readme"
+  "homepage": "https://github.com/Stilon/Evromed#readme",
+  "dependencies": {
+    "jquery.mmenu": "^6.1.5"
+  }
 }
