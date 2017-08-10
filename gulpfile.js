@@ -86,8 +86,8 @@ gulp.task('build', ['sass', 'scripts'], function () {
         ])
         .pipe(gulp.dest('docs/css'));
 
-    gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('docs/fonts'));
+    gulp.src('src/font/**/*')
+        .pipe(gulp.dest('docs/font'));
 
     gulp.src('src/img/**/*')
         .pipe(gulp.dest('docs/img'));
