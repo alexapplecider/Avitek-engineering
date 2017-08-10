@@ -8,11 +8,9 @@
   <link rel="stylesheet" href="css/main.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-
 </head>
 
 <body>
-
   <header class="header">
     <div class="container-full">
       <div class="container">
@@ -48,11 +46,10 @@
           <div class="top-line__contacts">
             <a class="top-line__contacts-number" href="tel:74996545567">+7 499 654-55-67</a>
             <a class="top-line__contacts-mail" href="mailto:info@avitekengineering.ru">info@avitekengineering.ru</a></div>
-
           <div class="mobile-menu">
             <a class="mobile-menu__btn">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </a>
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
             <ul class="mobile-menu-nav-list">
               <a class="mobile-menu__btn mobile-menu__btn--open">
                 <i class="fa fa-times" aria-hidden="true"></i>
@@ -81,7 +78,6 @@
             </ul>
           </div>
         </div>
-
       </div>
     </div>
     <div class="container">
@@ -90,18 +86,27 @@
         <h2>специализируемся на проектировании и монтаже свыше 7 лет</h2>
       </div>
       <div class="header__servises">
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-1.png" alt="">Кондиционирование</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-2.png" alt="">Вентиляция</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-3.png" alt="">Отопление</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-4.png" alt="">Пожарные системы</a>
-        <a class="header__servises-link" href="#"><img src="img/icons/servises-5.png" alt="">Водоснабжение</a>
+        <a class="header__servises-link header__servises-link--conditioning" href="#">
+          Кондиционирование</a>
+        <a class="header__servises-link header__servises-link--ventilation" href="#">
+          Вентиляция</a>
+        <a class="header__servises-link header__servises-link--heating" href="#">
+          Отопление</a>
+        <a class="header__servises-link header__servises-link--fire-systems" href="#">
+          Пожарные системы</a>
+        <a class="header__servises-link header__servises-link--water" href="#">
+          Водоснабжение</a>
       </div>
     </div>
-
   </header>
 
   <main>
-
+    <div class="coontainer">
+      <section class="about-us">
+        <article class="about-us___text"></article>
+        <div class="about-us__last-news"></div>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -117,19 +122,14 @@
       mobMenuBlock.toggleClass('mobile-menu-nav-list--show');
     });
 
-
-
     $(document).ready(function () {
       $('.mobile-menu-drop').hide();
       $('.mobile-menu-nav-list__item--title').click(function () {
         $('.mobile-menu-nav-list__item--title').toggleClass('mobile-menu-nav-list__item-link--active');
         $('.mobile-menu-drop').slideToggle(100);
       });
-
-
     });
   </script>
-
 
 </body>
 
