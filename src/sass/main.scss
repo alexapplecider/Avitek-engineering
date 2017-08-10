@@ -1,6 +1,6 @@
 @import "global/normalize";
-@import "global/scaffolding";
 @import "global/fonts";
+@import "global/scaffolding";
 @import "global/general";
 a:hover {
     color: #1597cf;
@@ -202,20 +202,31 @@ a:hover {
         @media (max-width: 600px) {
             display: block;
         }
+        &:active {
+            color: #ffffff;
+        }
     }
     &-nav-list {
         display: none;
         position: absolute;
         top: 0;
         right: 0;
-        width: 60vw;
+        min-width: 65vw;
         height: 100vh;
         background-color: #ffffff;
         font-size: 1.5rem;
         color: #000000;
         text-align: left;
         padding-top: 3rem;
-        padding-left: 3.6rem;
+        padding-left: 3rem;
+        @media (max-width: $mobile) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 300px) {
+            font-size: 1rem;
+            word-wrap: break-word;
+            padding-left: 1.5rem;
+        }
         &--show {
             display: block;
         }
@@ -228,13 +239,26 @@ a:hover {
         }
         &__item {
             margin-bottom: 3rem;
+            @media (max-width: $mobile) {
+                margin-bottom: 2rem;
+            }
+            &-link--active {
+                color: #1597cf;
+            }
         }
     }
     &-drop {
         display: none;
         margin-top: 10px;
+        &__list {
+            padding-left: 0.7rem;
+            max-width: 40vw;
+        }
         &__list-item {
-            line-height: 30px;
+            line-height: 2.7rem;
+        }
+        &--show {
+            display: block;
         }
     }
 }
