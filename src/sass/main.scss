@@ -1,5 +1,5 @@
-@import "global/normalize";
 @import "global/fonts";
+@import "global/normalize";
 @import "global/scaffolding";
 @import "global/general";
 a:hover {
@@ -294,8 +294,112 @@ a:hover {
         }
     }
 }
+
 // HEADER
 // MAIN
+.about-us-and-news {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 8.5rem;
+    padding-bottom: 8rem;
+    &__info {
+        max-width: 63.5rem;
+    }
+    &__last-news-slider {
+        max-width: 44rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.info {
+    &__header {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+        & strong {
+            font-weight: 500;
+        }
+    }
+    &__text {
+        color: #767676;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        margin-bottom: 1.5rem;
+    }
+    &__btn {
+        display: inline-block;
+        padding: 1rem 3.8rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-top: 1.5rem;
+        border: 1px solid #1c96ce;
+        cursor: pointer;
+    }
+}
+
+.last-news-slider {
+    &__header {
+        flex-basis: 100%;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+        & strong {
+            font-weight: 500;
+        }
+    }
+    &__link-all-news {
+        display: block;
+        width: 100%;
+        margin-top: 3rem;
+        font-size: 1.3rem;
+        color: #757575;
+        text-decoration: underline;
+        text-align: right;
+    }
+}
+
+.slide-news {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 20rem;
+    border: 1px solid #ebebeb; // margin-right: 3.5rem;
+    padding-bottom: 1rem;
+    &__img {
+        display: block;
+        width: 100%;
+        max-height: 12.8rem;
+    }
+    &__header {
+        display: block;
+        margin-top: 1.6rem;
+        margin-bottom: 0.9rem;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0 1.4rem;
+    }
+    &__text {
+        padding: 0 1.4rem;
+        overflow: hidden;
+        text-overflow: clip;
+        font-size: 1.3rem;
+        color: #757575;
+        max-height: 8rem;
+    }
+    &__link {
+        color: #3a86a9;
+        display: block;
+        text-align: right;
+        margin-right: 1rem;
+    }
+    &:nth-child(odd) {
+        // margin-right: 0;
+    }
+}
 
 // MAIN
 // FOOTER
