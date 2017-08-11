@@ -239,15 +239,13 @@ a:hover {
         }
     }
     &-nav-list {
-        display: none; 
-        // position: absolute;
+        display: none; // position: absolute;
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         min-width: 65vw;
-        overflow: auto; 
-        // height: 100vh;
+        overflow: auto; // height: 100vh;
         min-width: 65vw;
         background-color: #ffffff;
         font-size: 1.5rem;
@@ -255,6 +253,7 @@ a:hover {
         text-align: left;
         padding-top: 3rem;
         padding-left: 3rem;
+        z-index: 100;
         @media (max-width: $mobile) {
             font-size: 1.2rem;
         }
@@ -397,18 +396,29 @@ a:hover {
     flex-wrap: wrap;
     overflow: hidden;
     margin: 0 auto;
+    @media (max-width: $tablet) {
+        max-width:90.5%;
+    }
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
 }
 
 .slide-news {
     display: inline-block;
     vertical-align: top;
-    width: 20rem;
+    max-width: 20rem;
+    width: 100%;
     margin: 0 1rem;
     border: 1px solid #ebebeb;
     padding-bottom: 1rem;
+    // @media (max-width: $mobile) {
+    //     width: 20rem;
+    // }
     &__img {
         display: block;
         width: 100%;
+        height: 130px;
     }
     &__header {
         display: block;
@@ -417,6 +427,9 @@ a:hover {
         text-align: center;
         font-size: 1.5rem;
         padding: 0 1.4rem;
+        @media (max-width: $tablet) {
+            font-size: 1.1rem;
+        }
     }
     &__text {
         padding: 0 1.4rem;
