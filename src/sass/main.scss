@@ -300,27 +300,42 @@ a:hover {
 .about-us-and-news {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding-top: 8.5rem;
     padding-bottom: 8rem;
+    @media (max-width: 780px) {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
     &__info {
         max-width: 63.5rem;
+        margin-right: 2rem;
+        @media (max-width: $mobile) {
+            margin-right: 0;
+        }
     }
-    &__last-news-slider {
+    &__last-news {
         max-width: 44rem;
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
     }
 }
 
 .info {
     &__header {
+        margin-top: 0;        
         text-transform: uppercase;
         font-size: 2rem;
         font-weight: 300;
+        @media (max-width: $mobile) {
+            font-size: 1.9rem;
+        }
         & strong {
             font-weight: 500;
         }
@@ -330,6 +345,9 @@ a:hover {
         font-size: 1.5rem;
         line-height: 1.9rem;
         margin-bottom: 1.5rem;
+        @media (max-width: $mobile) {
+            font-size: 1.3rem;
+        }
     }
     &__btn {
         display: inline-block;
@@ -339,15 +357,25 @@ a:hover {
         margin-top: 1.5rem;
         border: 1px solid #1c96ce;
         cursor: pointer;
+        @media (max-width: $mobile) {
+            font-size: 1.3rem;
+        }
     }
 }
 
-.last-news-slider {
+.last-news {
     &__header {
+        margin-top: 0;
         flex-basis: 100%;
         text-transform: uppercase;
         font-size: 2rem;
         font-weight: 300;
+        @media (max-width: $tablet) {
+            margin-top: 5.5rem;
+        }
+        @media (max-width: $mobile) {
+            font-size: 1.9rem;
+        }
         & strong {
             font-weight: 500;
         }
@@ -363,11 +391,41 @@ a:hover {
     }
 }
 
+.slider {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 44rem;
+    overflow: hidden;
+    max-height: 29rem;
+    @media (max-width: $tablet) {
+        flex-wrap: nowrap;
+        max-width: 100%;
+        width: 100%;
+        max-height: 29rem;
+    }
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-height: 30.5rem;        
+    }
+    @media (max-width: 450px) {
+        margin: 0 auto;
+        width: 20rem;
+        max-height: 29.6rem;
+    }
+    @media (max-width: $mobile) {
+        max-height: 29.5rem;
+    }
+}
+
 .slide-news {
     display: inline-block;
     vertical-align: top;
-    max-width: 20rem;
-    border: 1px solid #ebebeb; // margin-right: 3.5rem;
+    width: 20rem;
+    // width: 100%;
+    margin: 0 1rem;
+    border: 1px solid #ebebeb;
     padding-bottom: 1rem;
     &__img {
         display: block;
@@ -395,9 +453,6 @@ a:hover {
         display: block;
         text-align: right;
         margin-right: 1rem;
-    }
-    &:nth-child(odd) {
-        // margin-right: 0;
     }
 }
 

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/main.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
 </head>
 
 <body>
@@ -118,31 +119,44 @@
             Мы работаем с объектами, принадлежащими к классам В и В+, площадь которых составляет 5000 м² и более.</p>
           <a class="info__btn" href="#">Подробнее</a>
         </article>
-        <div class="about-us-and-news__last-news-slider">
-          <h2 class="last-news-slider__header">ПОСЛЕДНИЕ <strong>НОВОСТИ</strong></h2>
-          <div class="slide-news">
-            <img class="slide-news__img" src="img/slide-img.png" alt="">
-            <strong class="slide-news__header">Ведущие специалисты</strong>
-            <p class="slide-news__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-              sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a class="slide-news__link" href="#">Далее...</a>
+        <div class="about-us-and-news__last-news">
+          <h2 class="last-news__header">ПОСЛЕДНИЕ <strong>НОВОСТИ</strong></h2>
+          <div class="slider responsive">
+            <div class="slide-news">
+              <img class="slide-news__img" src="img/slide-img.png" alt="">
+              <strong class="slide-news__header">Ведущие специалисты</strong>
+              <p class="slide-news__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a class="slide-news__link" href="#">Далее...</a>
+            </div>
+            <div class="slide-news">
+              <img class="slide-news__img" src="img/slide-img.png" alt="">
+              <strong class="slide-news__header">Ведущие специалисты</strong>
+              <p class="slide-news__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a class="slide-news__link" href="#">Далее...</a>
+            </div>
+            <div class="slide-news">
+              <img class="slide-news__img" src="img/slide-img.png" alt="">
+              <strong class="slide-news__header">Ведущие специалисты</strong>
+              <p class="slide-news__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a class="slide-news__link" href="#">Далее...</a>
+            </div>
           </div>
-          <div class="slide-news">
-            <img class="slide-news__img" src="img/slide-img.png" alt="">
-            <strong class="slide-news__header">Ведущие специалисты</strong>
-            <p class="slide-news__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-              sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a class="slide-news__link" href="#">Далее...</a>
-          </div>
-          <a href="#" class="last-news-slider__link-all-news">Посмотреть все новости</a>
+          <a href="#" class="last-news__link-all-news">Посмотреть все новости</a>
         </div>
 
       </section>
@@ -154,6 +168,7 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   <script type="text/javascript">
     var mobMenuButton = $('.mobile-menu__btn'),
@@ -168,6 +183,60 @@
         $('.mobile-menu-nav-list__item--title').toggleClass('mobile-menu-nav-list__item-link--active');
         $('.mobile-menu-drop').slideToggle(100);
       });
+    });
+
+    $('.responsive').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      autoplay: true,
+      responsive: [{
+          breakpoint: 1170,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false
+          }
+        },
+        {
+          breakpoint: 320,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
   </script>
 
