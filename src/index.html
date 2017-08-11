@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная</title>
-  <link rel="stylesheet" href="css/main.min.css">
+  
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
@@ -76,6 +77,22 @@
               <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Отзывы</a></li>
               <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Новости</a></li>
               <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link" href="#">Контакты</a></li>
+              <li class="mobile-menu-nav-list__item"><a class="mobile-menu-nav-list__item-link mobile-menu-nav-list__item--title" href="#">Услуги <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <div class="mobile-menu-drop">
+                  <ul class="mobile-menu-drop__list">
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Кондиционирование</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Вентиляция</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Отопление</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Пожарные системы</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Водоснабжение</a></li>
+                  </ul>
+                  <ul class="mobile-menu-drop__list mobile-menu-drop__list--second-block">
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">VRF/VRV Системы</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Фанкойлы и чиллеры</a></li>
+                    <li class="mobile-menu-drop__list-item"><a href="#" class="mobile-menu-drop__list-item-link">Прецизионное кондиционирование</a></li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -155,6 +172,39 @@
               </p>
               <a class="slide-news__link" href="#">Далее...</a>
             </div>
+            <div class="slide-news">
+              <img class="slide-news__img" src="img/slide-img.png" alt="">
+              <strong class="slide-news__header">Ведущие специалисты</strong>
+              <p class="slide-news__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a class="slide-news__link" href="#">Далее...</a>
+            </div>
+            <div class="slide-news">
+              <img class="slide-news__img" src="img/slide-img.png" alt="">
+              <strong class="slide-news__header">Ведущие специалисты</strong>
+              <p class="slide-news__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a class="slide-news__link" href="#">Далее...</a>
+            </div>
+            <div class="slide-news">
+              <img class="slide-news__img" src="img/slide-img.png" alt="">
+              <strong class="slide-news__header">Ведущие специалисты</strong>
+              <p class="slide-news__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim Далее.. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a class="slide-news__link" href="#">Далее...</a>
+            </div>
           </div>
           <a href="#" class="last-news__link-all-news">Посмотреть все новости</a>
         </div>
@@ -187,17 +237,17 @@
 
     $('.responsive').slick({
       dots: false,
-      infinite: false,
-      speed: 300,
+      infinite: true,
+      speed: 200,
       slidesToShow: 2,
       slidesToScroll: 2,
       autoplay: true,
+      arrows: false,
       responsive: [{
           breakpoint: 1170,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            infinite: false,
             dots: false
           }
         },
@@ -206,15 +256,15 @@
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            infinite: false
+            autoplay: true
           }
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: false
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true
           }
         },
         {
@@ -222,7 +272,7 @@
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            infinite: false
+            autoplay: true
           }
         },
         {
@@ -230,7 +280,7 @@
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            infinite: false
+            autoplay: true
           }
         }
         // You can unslick at a given breakpoint now by adding:
