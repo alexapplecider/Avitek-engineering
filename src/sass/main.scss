@@ -2,8 +2,22 @@
 @import "global/normalize";
 @import "global/scaffolding";
 @import "global/general";
+
 a:hover {
     color: #1597cf;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3.8rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+    border: 1px solid #1c96ce;
+    cursor: pointer;
+    @media (max-width: $mobile) {
+        font-size: 1.3rem;
+    }
 }
 
 // HEADER
@@ -321,7 +335,8 @@ a:hover {
         width: 100%;
         @media (max-width: $tablet) {
             flex-wrap: wrap;
-            max-width: 100%;
+            max-width: 90%;
+            margin: 0 auto;
         }
     }
 }
@@ -333,7 +348,7 @@ a:hover {
         font-size: 2rem;
         font-weight: 300;
         @media (max-width: $mobile) {
-            font-size: 1.9rem;
+            font-size: 1.7rem;
         }
         & strong {
             font-weight: 500;
@@ -348,24 +363,13 @@ a:hover {
             font-size: 1.3rem;
         }
     }
-    &__btn {
-        display: inline-block;
-        padding: 1rem 3.8rem;
-        font-size: 1.6rem;
-        line-height: 2rem;
-        margin-top: 1.5rem;
-        border: 1px solid #1c96ce;
-        cursor: pointer;
-        @media (max-width: $mobile) {
-            font-size: 1.3rem;
-        }
-    }
 }
 
 .last-news {
     &__header {
+        display: inline-block;
+        vertical-align: bottom;
         margin-top: 0;
-        flex-basis: 100%;
         text-transform: uppercase;
         font-size: 2rem;
         font-weight: 300;
@@ -373,7 +377,7 @@ a:hover {
             margin-top: 5.5rem;
         }
         @media (max-width: $mobile) {
-            font-size: 1.9rem;
+            font-size: 1.7rem;
         }
         & strong {
             font-weight: 500;
@@ -390,23 +394,45 @@ a:hover {
     }
 }
 
+.slider-buttons {
+    display: inline-block;
+    font-size: 1.1rem;
+    border: 1px solid #1597cf;
+    &__prev,
+    &__next {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0.5rem 0.7rem;
+        cursor: pointer;
+    }
+    &__prev:focus,
+    &__next:focus {
+        outline: none;
+    }
+    &__prev {
+        color: #1597cf;
+    }
+    &__next {
+        color: #ffffff;
+        background-color: #1597cf;
+    }
+}
+
 .slider {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
     margin: 0 auto;
-    @media (max-width: $tablet) {
-        max-width:90.5%;
+    @media (max-width: 600px) {
+        width: 420px;
     }
-    @media (max-width: $mobile) {
-        width: 100%;
+    @media (max-width: 480px) {
+        width: 220px;
     }
 }
 
 .slide-news {
-    display: inline-block;
-    vertical-align: top;
     max-width: 20rem;
     width: 100%;
     margin: 0 1rem;
@@ -427,9 +453,6 @@ a:hover {
         text-align: center;
         font-size: 1.5rem;
         padding: 0 1.4rem;
-        @media (max-width: $tablet) {
-            font-size: 1.1rem;
-        }
     }
     &__text {
         padding: 0 1.4rem;
@@ -444,6 +467,141 @@ a:hover {
         display: block;
         text-align: right;
         margin-right: 1rem;
+    }
+}
+
+.our-features {
+    padding: 7rem 0;
+    background-color: #fafafa;
+    &__header-text {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 4.4rem;
+    }
+    &__header-text span {
+        font-weight: 300;
+    }
+}
+
+.feature-card {
+    align-self: stretch;
+    max-width: 26.2rem;
+    width: 100%;
+    padding-top: 4rem;
+    padding: 4rem 2.8rem 3.8rem;
+    background-color: #ffffff;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
+    color: #333333;
+    line-height: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    &__header {
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #1c96ce;
+        margin-top: 2.8rem;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.our-objects {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    &__header {
+        display: inline-block;
+        vertical-align: top;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+        font-size: 2rem;
+    }
+    &__header span {
+        font-weight: 300;
+    }
+}
+
+.our-objects-slide {
+    position: relative;
+    display: flex !important;
+    justify-content: space-between;
+
+    &__img {
+        max-width: 55.4rem;
+        width: 100%;
+        height: 26.5rem;
+        margin-right: 3rem;
+    }
+    &__header {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 2.8rem;
+    }
+    &__text {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    &__all-objects {
+        position: absolute;
+        right: 0;
+        bottom: 3%;
+        color: #757575;
+        font-size: 1.3rem;
+        font-weight: 300;
+        text-decoration: underline;
+        text-align: right;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 55.6rem;
+        width: 100%;
+        &>.btn {
+            align-self: flex-start;
+        }
+    }
+}
+
+.feedback {
+    padding: 7.5rem 0;
+    background: url(../img/feedback-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.feedback-block {
+    width: 36rem;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 3.9rem 5.1rem 6rem;
+    text-align: center;
+    
+    &__header {
+        margin-bottom: 5rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+    }
+    &__form input {
+        display: block;
+        width: 16.5rem;
+        padding: 0.8rem 0;
+        margin: 0 auto;
+        color: red;
+        font-size: 1.5rem;
+        border-bottom: 1px solid #9697a1;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    &__form button {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 1rem 3.8rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: 1px;
+        color: #ffffff;
+        background-color: #1c96ce;
+        cursor: pointer;
     }
 }
 
