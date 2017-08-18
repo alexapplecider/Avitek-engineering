@@ -49,6 +49,9 @@ a:hover {
             font-size: 4rem;
             margin-top: 5rem;
         }
+        @media (max-width: 480px) {
+            font-size: 2.4rem;
+        }
         @media (max-width: $mobile) {
             font-size: 1.8rem;
             margin-top: 5rem;
@@ -87,7 +90,7 @@ a:hover {
             background-repeat: no-repeat;
             @media (max-width: $tablet) {
                 font-size: 1.3rem;
-                max-width: 10rem;
+                max-width: 11rem;
                 word-wrap: break-word;
                 font-size: 1.3rem;
             }
@@ -166,7 +169,7 @@ a:hover {
             font-size: 1.5rem;
         }
         @media (max-width: 600px) {
-            display: none;
+            text-align: center;
         }
         &-mail {
             text-decoration: underline;
@@ -241,7 +244,11 @@ a:hover {
 }
 
 .mobile-menu {
-    width: 5rem;
+    display: none;
+    @media (max-width: 600px) {
+        display: block;
+        width: 5rem;
+    }
     &__btn {
         display: none;
         font-size: 3rem;
@@ -339,6 +346,9 @@ a:hover {
             max-width: 90%;
             margin: 0 auto;
         }
+        @media (max-width: 480px) {
+            max-width: 100%;
+        }
     }
 }
 
@@ -429,7 +439,14 @@ a:hover {
         width: 420px;
     }
     @media (max-width: 480px) {
-        width: 220px;
+        max-width: 447px;
+        width: 100%;
+    }
+    @media (max-width: 400px) {
+        width: 300px;
+    }
+    @media (max-width: $mobile) {
+        width: 250px;
     }
 }
 
@@ -578,6 +595,9 @@ a:hover {
         @media (max-width: $tablet) {
             right: 3%;
         }
+        @media (max-width: 401px) {
+            display: none;
+        }
     }
     &__info {
         display: flex;
@@ -602,14 +622,21 @@ a:hover {
     width: 100%;
     background-color: #ffffff;
     margin: 0 auto;
-    padding: 3.9rem 5.1rem 6rem;
+    padding-top: 2.7rem;
+    padding-bottom: 5rem;
     text-align: center;
+    @media(max-width: 400px) {
+        max-width: 33rem;
+        padding-top: 2rem;
+        padding-bottom: 4.5rem;
+    }
 
     &__header {
         margin-bottom: 5rem;
         font-size: 2rem;
         line-height: 2.4rem;
         text-transform: uppercase;
+        font-weight: 500;
     }
     &__form input {
         display: block;
@@ -651,7 +678,6 @@ a:hover {
         flex-wrap: wrap;
         align-items: center;
         @media (max-width: 400px) {
-            // flex-direction: column;
             justify-content: center;
         }
         & div {
@@ -659,6 +685,9 @@ a:hover {
             text-align: center;
             width: 100%;
             margin-bottom: 5rem;
+            @media (max-width: $tablet) {
+                max-width: 13rem;
+            }
         }
     }
 }
