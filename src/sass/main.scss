@@ -9,10 +9,10 @@ a:hover {
 
 .btn {
     display: inline-block;
-    padding: 1rem 3.8rem;
+    padding: 10px 38px;
     font-size: 1.6rem;
-    line-height: 2rem;
-    margin-top: 1.5rem;
+    line-height: 20px;
+    margin-top: 15px;
     border: 1px solid #1c96ce;
     cursor: pointer;
     @media (max-width: $mobile) {
@@ -21,20 +21,21 @@ a:hover {
 }
 
 .logo {
-    width: 100%;
-    max-width: 9rem;
-    max-height: 4.7rem;
+    // width: 100%;
+    flex-basis: 100%;
+    max-width: 90px;
+    max-height: 47px;
 }
 
 // HEADER
 .header {
-    min-height: 55rem;
+    min-height: 55px;
     background: url(../img/header-bg.jpg) center center no-repeat;
     background-size: cover;
     color: #ffffff;
     & .container-full {
         border-bottom: 1px solid rgba(248, 248, 248, .2);
-        padding-bottom: 0.8rem;
+        padding-bottom: 8px;
         @media (max-width: $tablet) {
             padding-bottom: 0;
         }
@@ -44,17 +45,17 @@ a:hover {
         text-align: center;
         font-weight: 700;
         margin: 0;
-        margin-top: 7rem;
+        margin-top: 70px;
         @media (max-width: $tablet) {
             font-size: 4rem;
-            margin-top: 5rem;
+            margin-top: 50px;
         }
         @media (max-width: 480px) {
             font-size: 2.4rem;
         }
         @media (max-width: $mobile) {
             font-size: 1.8rem;
-            margin-top: 5rem;
+            margin-top: 50px;
         }
     }
     &__text h2 {
@@ -67,7 +68,7 @@ a:hover {
         }
     }
     &__servises {
-        margin-top: 7rem;
+        margin-top: 70px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -75,29 +76,30 @@ a:hover {
         @media (max-width: $tablet) {
             justify-content: space-around;
             align-items: baseline;
-            margin-top: 5rem;
+            margin-top: 50px;
         }
         &-link {
             display: inline-block;
-            max-width: 13rem;
-            height: 16.5rem;
-            width: 100%;
+            max-width: 130px;
+            height: 165px;
+            // width: 100%;
+            flex-basis: 100%;
             text-align: center;
-            padding-top: 10rem;
+            padding-top: 100px;
             font-size: 1.5rem;
             background-size: 60%;
             background-position: top center;
             background-repeat: no-repeat;
             @media (max-width: $tablet) {
                 font-size: 1.3rem;
-                max-width: 11rem;
+                max-width: 110px;
                 word-wrap: break-word;
                 font-size: 1.3rem;
             }
             @media (max-width: $mobile) {
-                max-width: 8rem;
-                padding-top: 8rem;
-                height: 13.5rem;
+                max-width: 80px;
+                padding-top: 80px;
+                height: 135px;
             }
             &--conditioning {
                 background-image: url(../img/icons/servises-1.png);
@@ -141,31 +143,33 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 8.8rem;
-    padding-top: 2rem;
+    min-height: 88px;
+    padding-top: 20px;
     @media (max-width: $tablet) {
         padding-top: 0;
     }
     &__nav {
-        max-width: 64rem;
-        width: 100%;
-        margin: 0 1.5rem;
+        max-width: 640px;
+        // width: 100%;
+        flex-basis: 100%;
+        margin: 0 15px;
         @media (max-width: $tablet) {
-            max-width: 25rem;
-            margin-top: 3rem;
+            max-width: 250px;
+            margin-top: 30px;
         }
         @media (max-width: 600px) {
             display: none;
         }
     }
     &__contacts {
-        max-width: 23rem;
-        width: 100%;
+        max-width: 230px;
+        // width: 100%;
+        flex-basis: 100%;
         text-align: right;
         font-family: $f-main;
         font-size: 2rem;
         @media (max-width: $tablet) {
-            max-width: 15rem;
+            max-width: 150px;
             font-size: 1.5rem;
         }
         @media (max-width: 600px) {
@@ -191,7 +195,7 @@ a:hover {
     &__item {
         position: relative;
         @media (max-width: $tablet) {
-            margin-bottom: 3.5rem;
+            margin-bottom: 35px;
         }
         &:first-child:hover .drop-menu {
             display: flex;
@@ -208,7 +212,7 @@ a:hover {
     left: -65%;
     display: flex;
     justify-content: space-around;
-    width: 43rem;
+    width: 430px;
     background-color: #000000;
     color: #ffffff;
     font-size: 1.5rem;
@@ -234,7 +238,7 @@ a:hover {
         flex-wrap: wrap;
         width: 155px;
         height: 215px;
-        line-height: 3.4rem;
+        line-height: 34px;
         &--second-block {
             padding-left: 0;
             width: 155px;
@@ -247,7 +251,7 @@ a:hover {
     display: none;
     @media (max-width: 600px) {
         display: block;
-        width: 5rem;
+        width: 50px;
     }
     &__btn {
         display: none;
@@ -273,8 +277,8 @@ a:hover {
         font-size: 1.5rem;
         color: #000000;
         text-align: left;
-        padding-top: 3rem;
-        padding-left: 3rem;
+        padding-top: 30px;
+        padding-left: 30px;
         z-index: 100;
         @media (max-width: $mobile) {
             font-size: 1.2rem;
@@ -282,7 +286,7 @@ a:hover {
         @media (max-width: 300px) {
             font-size: 1rem;
             word-wrap: break-word;
-            padding-left: 1.5rem;
+            padding-left: 15px;
         }
         &--show {
             display: block;
@@ -295,9 +299,9 @@ a:hover {
             padding: 10px;
         }
         &__item {
-            margin-bottom: 3rem;
+            margin-bottom: 30px;
             @media (max-width: $mobile) {
-                margin-bottom: 2rem;
+                margin-bottom: 20px;
             }
             &-link--active {
                 color: #1597cf;
@@ -308,11 +312,11 @@ a:hover {
         display: none;
         margin-top: 10px;
         &__list {
-            padding-left: 0.7rem;
+            padding-left: 7px;
             max-width: 40vw;
         }
         &__list-item {
-            line-height: 2.7rem;
+            line-height: 27px;
         }
         &--show {
             display: block;
@@ -325,22 +329,23 @@ a:hover {
 .about-us-and-news {
     display: flex;
     justify-content: space-between;
-    padding-top: 8.5rem;
-    padding-bottom: 8rem;
+    padding-top: 85px;
+    padding-bottom: 80px;
     @media (max-width: 780px) {
         flex-wrap: wrap;
         max-width: 100%;
     }
     &__info {
-        max-width: 63.5rem;
-        margin-right: 2rem;
+        max-width: 635px;
+        margin-right: 20px;
         @media (max-width: $mobile) {
             margin-right: 0;
         }
     }
     &__last-news {
-        max-width: 44rem;
-        width: 100%;
+        max-width: 440px;
+        // width: 100%;
+        flex-basis: 100%;
         @media (max-width: $tablet) {
             flex-wrap: wrap;
             max-width: 90%;
@@ -348,6 +353,11 @@ a:hover {
         }
         @media (max-width: 480px) {
             max-width: 100%;
+        }
+        &-inner-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
         }
     }
 }
@@ -368,8 +378,8 @@ a:hover {
     &__text {
         color: #767676;
         font-size: 1.5rem;
-        line-height: 1.9rem;
-        margin-bottom: 1.5rem;
+        line-height: 19px;
+        margin-bottom: 15px;
         @media (max-width: $mobile) {
             font-size: 1.3rem;
         }
@@ -385,7 +395,7 @@ a:hover {
         font-size: 2rem;
         font-weight: 300;
         @media (max-width: $tablet) {
-            margin-top: 5.5rem;
+            margin-top: 55px;
         }
         @media (max-width: $mobile) {
             font-size: 1.7rem;
@@ -397,7 +407,7 @@ a:hover {
     &__link-all-news {
         display: block;
         width: 100%;
-        margin-top: 3rem;
+        margin-top: 30px;
         font-size: 1.3rem;
         color: #757575;
         text-decoration: underline;
@@ -413,7 +423,7 @@ a:hover {
     &__next {
         display: inline-block;
         vertical-align: middle;
-        padding: 0.5rem 0.7rem;
+        padding: 5px 7px;
         cursor: pointer;
     }
     &__prev:focus,
@@ -440,7 +450,8 @@ a:hover {
     }
     @media (max-width: 480px) {
         max-width: 447px;
-        width: 100%;
+        // width: 100%;
+        flex-basis: 100%;
     }
     @media (max-width: 400px) {
         width: 300px;
@@ -451,11 +462,12 @@ a:hover {
 }
 
 .slide-news {
-    max-width: 20rem;
-    width: 100%;
-    margin: 0 1rem;
+    max-width: 200px;
+    // width: 100%;
+    flex-basis: 100%;
+    margin: 0 10px;
     border: 1px solid #ebebeb;
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
     @media (max-width: 480px) {
         max-width: 100%;
     }
@@ -466,87 +478,91 @@ a:hover {
     }
     &__header {
         display: block;
-        margin-top: 1.6rem;
-        margin-bottom: 0.9rem;
+        margin-top: 16px;
+        margin-bottom: 9px;
         text-align: center;
         font-size: 1.5rem;
-        padding: 0 1.4rem;
+        padding: 0 14px;
     }
     &__text {
-        padding: 0 1.4rem;
+        padding: 0 14px;
         overflow: hidden;
         text-overflow: clip;
         font-size: 1.3rem;
         color: #757575;
-        max-height: 8rem;
+        max-height: 80px;
     }
     &__link {
         color: #3a86a9;
         display: block;
         text-align: right;
-        margin-right: 1rem;
+        margin-right: 10px;
     }
 }
 
 .our-features {
-    padding: 7rem 0;
+    padding: 70px 0;
     background-color: #fafafa;
-    &__header-text {
+    &__header {
         font-size: 2rem;
         text-transform: uppercase;
-        margin-bottom: 4.4rem;
+        margin-bottom: 44px;
     }
-    &__header-text span {
+    &__header span {
         font-weight: 300;
     }
 }
 
-.feature-cards {
+.feature-card {
     display: flex;
     justify-content: space-between;
     @media (max-width: 1050px) {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-}
-
-.feature-card {
-    align-self: stretch;
-    max-width: 26.2rem;
-    width: 100%;
-    padding-top: 4rem;
-    padding: 4rem 2.8rem 3.8rem;
-    background-color: #ffffff;
-    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
-    color: #333333;
-    line-height: 20px;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    &:nth-child(even) {
-        margin-right: 0;
-    }
-    @media (max-width: 600px) {
-        margin-right: 0;
-    }
-    &__header {
-        font-weight: 400;
-        font-size: 1.8rem;
-        color: #1c96ce;
-        margin-top: 2.8rem;
-        margin-bottom: 1.8rem;
+    &__item {
+        align-self: stretch;
+        max-width: 262px;
+        // width: 100%;
+        flex-basis: 100%;
+        padding-top: 4rem;
+        padding: 40px 28px 38px;
+        background-color: #ffffff;
+        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
+        color: #333333;
+        line-height: 20px;
+        font-size: 1.5rem;
+        text-align: center; // margin-right: 20px;
+        margin-bottom: 20px;
+        // &:nth-child(even) {
+        //     margin-right: 0;
+        // }
+        @media (max-width: 600px) {
+            margin-right: 0;
+        }
+        &-header {
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: #1c96ce;
+            margin-top: 28px;
+            margin-bottom: 18px;
+        }
     }
 }
 
 .our-objects {
-    padding-top: 8rem;
-    padding-bottom: 10rem;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    &__inner-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
     &__header {
         display: inline-block;
         vertical-align: top;
         text-transform: uppercase;
-        margin-bottom: 5rem;
+        margin-bottom: 50px;
         font-size: 2rem;
     }
     &__header span {
@@ -563,10 +579,11 @@ a:hover {
         align-items: center;
     }
     &__img {
-        max-width: 55.4rem;
-        width: 100%;
-        height: 26.5rem;
-        margin-right: 3rem;
+        max-width: 554px;
+        // width: 100%;
+        flex-basis: 100%;
+        height: 265px;
+        margin-right: 30px;
         @media (max-width: $tablet) {
             margin-right: 0;
             height: auto;
@@ -577,11 +594,11 @@ a:hover {
         font-size: 2rem;
         font-weight: 400;
         margin-top: 0;
-        margin-bottom: 2.8rem;
+        margin-bottom: 28px;
     }
     &__text {
         font-size: 1.5rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 25px;
     }
     &__all-objects {
         position: absolute;
@@ -603,8 +620,9 @@ a:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 55.6rem;
-        width: 100%;
+        max-width: 556px;
+        // width: 100%;
+        flex-basis: 100%;
         &>.btn {
             align-self: flex-start;
         }
@@ -612,50 +630,51 @@ a:hover {
 }
 
 .feedback {
-    padding: 7.5rem 0;
+    padding: 75px 0;
     background: url(../img/feedback-bg.jpg) center no-repeat;
     background-size: cover;
 }
 
 .feedback-block {
-    max-width: 36rem;
-    width: 100%;
+    max-width: 360px;
+    // width: 100%;
+    flex-basis: 100%;
     background-color: #ffffff;
     margin: 0 auto;
-    padding-top: 2.7rem;
-    padding-bottom: 5rem;
+    padding-top: 27px;
+    padding-bottom: 50px;
     text-align: center;
     @media(max-width: 400px) {
-        max-width: 33rem;
-        padding-top: 2rem;
-        padding-bottom: 4.5rem;
+        max-width: 330px;
+        padding-top: 20px;
+        padding-bottom: 45px;
     }
 
     &__header {
-        margin-bottom: 5rem;
-        font-size: 2rem;
-        line-height: 2.4rem;
+        margin-bottom: 50px;
+        font-size: 20px;
+        line-height: 24px;
         text-transform: uppercase;
         font-weight: 500;
     }
     &__form input {
         display: block;
-        width: 16.5rem;
-        padding: 0.8rem 0;
+        width: 165px;
+        padding: 8px 0;
         margin: 0 auto;
         font-size: 1.5rem;
         border-bottom: 1px solid #9697a1;
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: 40px;
     }
     &__form input:focus {
         outline: none;
     }
     &__form button {
         display: inline-block;
-        padding: 1rem 3.8rem;
+        padding: 10px 38px;
         font-size: 1.6rem;
-        line-height: 2rem;
+        line-height: 20px;
         letter-spacing: 1px;
         color: #ffffff;
         background-color: #1c96ce;
@@ -664,10 +683,10 @@ a:hover {
 }
 
 .our-partners {
-    padding: 10rem 0;
+    padding: 100px 0;
     &__header {
         font-size: 2rem;
-        margin-bottom: 9rem;
+        margin-bottom: 90px;
         & span {
             font-weight: 300;
         }
@@ -680,13 +699,14 @@ a:hover {
         @media (max-width: 400px) {
             justify-content: center;
         }
-        & div {
-            max-width: 19rem;
+        &-wrap {
+            max-width: 190px;
             text-align: center;
-            width: 100%;
-            margin-bottom: 5rem;
+            // width: 100%;
+            flex-basis: 100%;
+            margin-bottom: 50px;
             @media (max-width: $tablet) {
-                max-width: 13rem;
+                max-width: 130px;
             }
         }
     }
@@ -695,9 +715,14 @@ a:hover {
 // MAIN
 // FOOTER
 .footer {
+    &__inner-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
     background-color: #f9f9f9;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
+    padding-top: 40px;
+    padding-bottom: 50px;
     &__column-info {
         font-size: 1.3rem;
         margin-right: 20px;
@@ -711,9 +736,9 @@ a:hover {
 .social-links {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    width: 10rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100px;
     color: #2b2d42;
     font-size: 1.8rem;
     @media (max-width: 400px) {
@@ -724,7 +749,8 @@ a:hover {
 .phone {
     font-size: 1.5rem;
     max-width: 117px;
-    width: 100%;
+    // width: 100%;
+    flex-basis: 100%;
     margin-bottom: 30px;
     &__number {
         line-height: 30px;
@@ -742,7 +768,8 @@ a:hover {
 
 .footer-nav {
     max-width: 750px;
-    width: 100%;
+    // width: 100%;
+    flex-basis: 100%;
     display: flex;
     justify-content: space-between;
     margin-right: 100px;
