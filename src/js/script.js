@@ -1,84 +1,164 @@
 $(document).ready(function() {
 
-        var mobMenuButton = $('.mobile-menu__btn'),
-            mobMenuBlock = $('.mobile-menu-nav-list');
-        $('.mobile-menu__btn').on('click', function(event) {
-            mobMenuBlock.toggleClass('mobile-menu-nav-list--show');
-        });
-
-
-
-        $('.mobile-menu-drop').hide();
-        $('.mobile-menu-nav-list__item--title').click(function() {
-            $('.mobile-menu-nav-list__item--title').toggleClass('mobile-menu-nav-list__item-link--active');
-            $('.mobile-menu-drop').slideToggle(100);
-        });
-
-
-
-        $('.responsive-last-news-slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 900,
-            autoplay: true,
-            autoplaySpeed: 8000,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true,
-            prevArrow: '.slider-buttons__prev--last-news',
-            nextArrow: '.slider-buttons__next--last-news',
-            responsive: [{
-                    breakpoint: 1170,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
-
-
-        $('.our-objects-slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 900,
-            autoplay: true,
-            autoplaySpeed: 8000,
-            slidesToShow: 1,
-            arrows: true,
-            prevArrow: '.slider-buttons__prev--our-objects',
-            nextArrow: '.slider-buttons__next--our-objects'
-        });
+    // кнопка мобильного меню
+    var mobMenuButton = $('.mobile-menu__btn'),
+        mobMenuBlock = $('.mobile-menu-nav-list');
+    $('.mobile-menu__btn').on('click', function(event) {
+        mobMenuBlock.toggleClass('mobile-menu-nav-list--show');
     });
+
+
+    // настройка списка в мобильном меню
+    $('.mobile-menu-drop').hide();
+    $('.mobile-menu-nav-list__item--title').click(function() {
+        $('.mobile-menu-nav-list__item--title').toggleClass('mobile-menu-nav-list__item-link--active');
+        $('.mobile-menu-drop').slideToggle(100);
+    });
+
+
+    // настройка списков в футере
+    var footerListLink = $('.footer-nav__list-link');
+    footerListSubList = $('.footer-nav__sub-list');
+
+    $('.footer-nav__list-link').on('click', function(event) {
+        event.preventDefault();
+        $('.footer-nav__list-link').toggleClass('footer-nav__list-link--active');
+        $('.footer-nav__sub-list').toggleClass('footer-nav__sub-list--show');
+    });
+
+
+    // настройка слайдера Последние новости
+    $('.responsive-last-news-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 400,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '.slider-buttons__prev--last-news',
+        nextArrow: '.slider-buttons__next--last-news',
+        responsive: [{
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
+
+    // настройка слайдера Наши объекты
+    $('.our-objects-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 400,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        slidesToShow: 1,
+        arrows: true,
+        prevArrow: '.slider-buttons__prev--our-objects',
+        nextArrow: '.slider-buttons__next--our-objects'
+    });
+
+    // настройка слайдера Что мы делаем
+    $('.what-we-do-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 400,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        variableWidth: true,
+        prevArrow: '.slider-buttons__prev--what-we-do',
+        nextArrow: '.slider-buttons__next--what-we-do',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    // настройка слайдера Наша команда
+    $('.our-team-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 400,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        variableWidth: true,
+        prevArrow: '.slider-buttons__prev--our-team',
+        nextArrow: '.slider-buttons__next--our-team',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+});

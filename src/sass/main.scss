@@ -81,8 +81,7 @@ a:hover {
         &-link {
             display: inline-block;
             max-width: 130px;
-            height: 165px;
-            // width: 100%;
+            height: 165px; // width: 100%;
             flex-basis: 100%;
             text-align: center;
             padding-top: 100px;
@@ -149,8 +148,7 @@ a:hover {
         padding-top: 0;
     }
     &__nav {
-        max-width: 640px;
-        // width: 100%;
+        max-width: 640px; // width: 100%;
         flex-basis: 100%;
         margin: 0 15px;
         @media (max-width: $tablet) {
@@ -162,8 +160,7 @@ a:hover {
         }
     }
     &__contacts {
-        max-width: 230px;
-        // width: 100%;
+        max-width: 230px; // width: 100%;
         flex-basis: 100%;
         text-align: right;
         font-family: $f-main;
@@ -224,10 +221,10 @@ a:hover {
     &::after {
         position: absolute;
         content: "";
-        top: -10%;
+        bottom: 100%;
         left: 0%;
         display: block;
-        width: 135px;
+        width: 100%;
         height: 25px;
         background-color: transparent;
     }
@@ -237,7 +234,6 @@ a:hover {
         justify-content: space-around;
         flex-wrap: wrap;
         width: 155px;
-        height: 215px;
         line-height: 34px;
         &--second-block {
             padding-left: 0;
@@ -335,6 +331,10 @@ a:hover {
         flex-wrap: wrap;
         max-width: 100%;
     }
+    @media (max-width: $mobile) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     &__info {
         max-width: 635px;
         margin-right: 20px;
@@ -343,8 +343,7 @@ a:hover {
         }
     }
     &__last-news {
-        max-width: 440px;
-        // width: 100%;
+        max-width: 440px; // width: 100%;
         flex-basis: 100%;
         @media (max-width: $tablet) {
             flex-wrap: wrap;
@@ -399,6 +398,7 @@ a:hover {
         }
         @media (max-width: $mobile) {
             font-size: 1.7rem;
+            margin-top: 25px;
         }
         & strong {
             font-weight: 500;
@@ -449,8 +449,7 @@ a:hover {
         width: 420px;
     }
     @media (max-width: 480px) {
-        max-width: 447px;
-        // width: 100%;
+        max-width: 447px; // width: 100%;
         flex-basis: 100%;
     }
     @media (max-width: 400px) {
@@ -462,8 +461,7 @@ a:hover {
 }
 
 .slide-news {
-    max-width: 200px;
-    // width: 100%;
+    max-width: 200px; // width: 100%;
     flex-basis: 100%;
     margin: 0 10px;
     border: 1px solid #ebebeb;
@@ -503,13 +501,17 @@ a:hover {
 .our-features {
     padding: 70px 0;
     background-color: #fafafa;
-    &__header {
-        font-size: 2rem;
-        text-transform: uppercase;
-        margin-bottom: 44px;
+    @media (max-width: $mobile) {
+        padding: 35px 0;
     }
-    &__header span {
+    &__header {
+        margin-bottom: 44px;
+        font-size: 2rem;
         font-weight: 300;
+        text-transform: uppercase;
+    }
+    &__header strong {
+        font-weight: 500;
     }
 }
 
@@ -526,8 +528,7 @@ a:hover {
     }
     &__item {
         align-self: stretch;
-        max-width: 262px;
-        // width: 100%;
+        max-width: 262px; // width: 100%;
         flex-basis: 100%;
         margin-right: 2.65%;
         padding-top: 4rem;
@@ -537,15 +538,12 @@ a:hover {
         color: #333333;
         line-height: 20px;
         font-size: 1.5rem;
-        text-align: center; 
+        text-align: center;
         margin-bottom: 20px;
-        @media (max-width: 1000px) {
-            margin-right: 0;
-        }
-        @media (max-width: 600px) {
-            margin-right: 0;
-        }
         &:last-child {
+            margin-right: 0;
+        }
+        @media (max-width: 1000px) {
             margin-right: 0;
         }
         &-header {
@@ -561,6 +559,10 @@ a:hover {
 .our-objects {
     padding-top: 80px;
     padding-bottom: 100px;
+    @media (max-width: $mobile) {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
     &__inner-wrap {
         display: flex;
         justify-content: space-between;
@@ -569,12 +571,13 @@ a:hover {
     &__header {
         display: inline-block;
         vertical-align: top;
-        text-transform: uppercase;
         margin-bottom: 50px;
         font-size: 2rem;
-    }
-    &__header span {
         font-weight: 300;
+        text-transform: uppercase;
+    }
+    &__header strong {
+        font-weight: 500;
     }
 }
 
@@ -587,8 +590,7 @@ a:hover {
         align-items: center;
     }
     &__img {
-        max-width: 554px;
-        // width: 100%;
+        max-width: 554px; // width: 100%;
         flex-basis: 100%;
         height: 265px;
         margin-right: 30px;
@@ -628,8 +630,7 @@ a:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 556px;
-        // width: 100%;
+        max-width: 556px; // width: 100%;
         flex-basis: 100%;
         &>.btn {
             align-self: flex-start;
@@ -644,8 +645,7 @@ a:hover {
 }
 
 .feedback-block {
-    max-width: 360px;
-    // width: 100%;
+    max-width: 360px; // width: 100%;
     flex-basis: 100%;
     background-color: #ffffff;
     margin: 0 auto;
@@ -692,29 +692,36 @@ a:hover {
 
 .our-partners {
     padding: 100px 0;
+    @media (max-width: $mobile) {
+        padding: 50px 0;
+    }
     &__header {
         font-size: 2rem;
         margin-bottom: 90px;
-        & span {
-            font-weight: 300;
+        font-weight: 300;
+        @media (max-width: $mobile) {
+            margin-bottom: 30px;
+        }
+        & strong {
+            font-weight: 500;
         }
     }
     &__images {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         align-items: center;
         @media (max-width: 400px) {
-            justify-content: center;
+            justify-content: space-around;
         }
         &-wrap {
             max-width: 190px;
-            text-align: center;
-            // width: 100%;
+            text-align: center; // width: 100%;
             flex-basis: 100%;
             margin-bottom: 50px;
             @media (max-width: $tablet) {
                 max-width: 130px;
+                margin-bottom: 25px;
             }
         }
     }
@@ -750,14 +757,13 @@ a:hover {
     color: #2b2d42;
     font-size: 1.8rem;
     @media (max-width: 400px) {
-        font-size: 1.4rem;
+        font-size: 2.5rem;
     }
 }
 
 .phone {
     font-size: 1.5rem;
-    max-width: 117px;
-    // width: 100%;
+    max-width: 117px; // width: 100%;
     flex-basis: 100%;
     margin-bottom: 30px;
     &__number {
@@ -768,15 +774,12 @@ a:hover {
     }
 }
 
-.adress {}
-
 .copyright {
     margin-top: 40px;
 }
 
 .footer-nav {
-    max-width: 750px;
-    // width: 100%;
+    max-width: 750px; // width: 100%;
     flex-basis: 100%;
     display: flex;
     justify-content: space-between;
@@ -802,6 +805,9 @@ a:hover {
             @media (max-width: 400px) {
                 font-size: 1.2rem;
             }
+            &--active {
+                color: #1597cf;
+            }
         }
     }
     &__sub-list {
@@ -812,15 +818,192 @@ a:hover {
         @media (max-width: 650px) {
             display: none;
         }
+
+        &--show {
+            display: block !important;
+        }
     }
     @media (max-width: 1050px) {
         margin-right: 0;
     }
     @media (max-width: 650px) {
-        max-width: 200px;
+        max-width: 165px;
         flex-wrap: wrap;
         justify-content: flex-start;
     }
 }
 
 // FOOTER
+//------------------------------------------
+// PAGE: about-company.html
+.about-company {
+    // HEADER
+    .header {
+        padding-bottom: 70px;
+        background: url(../img/header-bg.jpg) center top no-repeat;
+        &__text h1 {
+            margin-top: 70px;
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+    }
+
+    .top-line {
+        &__nav {
+            margin: 0 25px;
+            max-width: 100%;
+        }
+    }
+
+    .nav-list {
+        &__item {
+            &:hover .drop-menu {
+                display: flex;
+                top: 200%;
+                opacity: 1;
+                transition: .5s opacity;
+            }
+        }
+    }
+
+    .drop-menu {
+        width: max-content;
+        padding: 15px 29px;
+        left: -20%;
+        &__list {
+            width: auto;
+            &-item {
+                // &:first-child {
+                //     color: #1c96ce;
+                // }
+            }
+        }
+    } // HEADER
+    // MAIN
+    .history {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 80px;
+        padding-bottom: 75px;
+        &__img {
+            max-width: 458px;
+            width: 100%;
+        }
+        &__info {
+
+            max-width: 647px;
+            width: 100%;
+            &-header {
+                margin-top: 0;
+                font-size: 2rem;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+            &-header strong {
+                font-weight: 500;
+            }
+            &-text {
+                color: #757575;
+                margin-bottom: 25px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .our-mission {
+        padding-bottom: 45px;
+        &__header {
+            margin-top: 0;
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        &__header strong {
+            font-weight: 500;
+        }
+        &__text {
+            color: #757575;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .what-we-do {
+        padding-top: 88px;
+        padding-bottom: 88px;
+        &__inner-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        &__header {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            & strong {
+                font-weight: 500;
+            }
+        }
+        &__slide {
+            max-width: 260px;
+            width: 100%;
+            margin-right: 30px;
+            &-img {
+                margin-bottom: 15px;
+            }
+            &-text {
+                font-size: 1.5rem;
+                color: #2b2d42;
+                text-align: left;
+            }
+            &-link {
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .our-team {
+        padding-bottom: 80px;
+        &__inner-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        &__header {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            & strong {
+                font-weight: 500;
+            }
+        }
+        &__slide {
+            width: 260px;
+            margin-right: 30px;
+            &-img {
+                margin-bottom: 15px;
+            }
+            &-title {
+                font-size: 2rem;
+                color: #333333;
+                font-weight: 400;
+            }
+            &-sub-title {
+                font-size: 1.5rem;
+                color: #757575;
+                font-weight: 300;
+            }
+        }
+    } // MAIN
+}
+
+// PAGE: about-company.html
+//------------------------------------------
