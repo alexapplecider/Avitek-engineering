@@ -499,11 +499,18 @@ a:hover {
 }
 
 .our-features {
-    padding: 70px 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
     background-color: #fafafa;
-    @media (max-width: $mobile) {
-        padding: 35px 0;
+    @media(max-width: $tablet) {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
+    @media (max-width: $mobile) {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    
     &__header {
         margin-bottom: 44px;
         font-size: 2rem;
@@ -531,6 +538,7 @@ a:hover {
         max-width: 262px; // width: 100%;
         flex-basis: 100%;
         margin-right: 2.65%;
+        margin-bottom: 20px;
         padding-top: 4rem;
         padding: 40px 28px 38px;
         background-color: #ffffff;
@@ -539,7 +547,12 @@ a:hover {
         line-height: 20px;
         font-size: 1.5rem;
         text-align: center;
-        margin-bottom: 20px;
+        @media (max-width: 1000px) {
+            margin-bottom: 66px;
+        }
+        @media (max-width: 600px) {
+            margin-bottom: 30px;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -841,28 +854,53 @@ a:hover {
     .header {
         padding-bottom: 70px;
         background: url(../img/header-bg.jpg) center top no-repeat;
+        @media(max-width: $tablet) {
+            padding-bottom: 66px;
+        }
         &__text h1 {
             margin-top: 70px;
-            font-size: 36px;
+            font-size: 3.6rem;
             font-weight: 400;
-            letter-spacing: 2px;
+            letter-spacing: 0.2rem;
+            @media(max-width: $tablet) {
+                margin-top: 48px;
+            }
+            @media(max-width: 600px) {
+                margin-top: 30px;
+            }
         }
     }
 
     .top-line {
         &__nav {
-            margin: 0 25px;
+            margin-top: 5px;
+            margin-left: 25px;
+            margin-right: 25px;
             max-width: 100%;
+            @media(max-width: 1100px) {
+                max-width: 380px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            @media(max-width: $tablet) {
+                max-width: 51%;
+            }
         }
     }
 
     .nav-list {
         &__item {
+            margin-bottom: 20px;
             &:hover .drop-menu {
                 display: flex;
                 top: 200%;
                 opacity: 1;
                 transition: .5s opacity;
+            }
+        }
+        &__item-link {
+            @media(max-width: $tablet) {
+                font-size: 1.3rem;
             }
         }
     }
@@ -882,37 +920,50 @@ a:hover {
     } // HEADER
     // MAIN
     .history {
-        display: flex;
-        justify-content: space-between;
         padding-top: 80px;
         padding-bottom: 75px;
+        @media(max-width: $tablet) {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
         &__img {
+            display: block;
             max-width: 458px;
             width: 100%;
+            margin-right: 20px;
+            float: left;
+            @media(max-width: $tablet) {
+                max-width: 350px;
+                width: 100%;
+            }
+            @media(max-width: 600px) {
+                float: none;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
-        &__info {
 
-            max-width: 647px;
-            width: 100%;
-            &-header {
-                margin-top: 0;
-                font-size: 2rem;
-                font-weight: 300;
-                text-transform: uppercase;
-            }
-            &-header strong {
-                font-weight: 500;
-            }
-            &-text {
-                color: #757575;
-                margin-bottom: 25px;
-                font-size: 1.5rem;
-            }
+        &__header {
+            margin-top: 0;
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        &__header strong {
+            font-weight: 500;
+        }
+        &__text {
+            color: #757575;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
         }
     }
 
     .our-mission {
         padding-bottom: 45px;
+        @media(max-width: $tablet) {
+            padding-bottom: 20px;
+        }
         &__header {
             margin-top: 0;
             font-size: 2rem;
@@ -932,6 +983,10 @@ a:hover {
     .what-we-do {
         padding-top: 88px;
         padding-bottom: 88px;
+        @media (max-width: $tablet) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
         &__inner-wrap {
             display: flex;
             justify-content: space-between;
@@ -949,9 +1004,9 @@ a:hover {
             }
         }
         &__slide {
-            max-width: 260px;
-            width: 100%;
-            margin-right: 30px;
+            width: 260px;
+            // width: 100%;
+            // margin-right: 30px;
             &-img {
                 margin-bottom: 15px;
             }

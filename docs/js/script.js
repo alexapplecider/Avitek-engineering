@@ -7,14 +7,12 @@ $(document).ready(function() {
         mobMenuBlock.toggleClass('mobile-menu-nav-list--show');
     });
 
-
     // настройка списка в мобильном меню
     $('.mobile-menu-drop').hide();
     $('.mobile-menu-nav-list__item--title').click(function() {
         $('.mobile-menu-nav-list__item--title').toggleClass('mobile-menu-nav-list__item-link--active');
         $('.mobile-menu-drop').slideToggle(100);
     });
-
 
     // настройка списков в футере
     var footerListLink = $('.footer-nav__list-link');
@@ -25,7 +23,6 @@ $(document).ready(function() {
         $('.footer-nav__list-link').toggleClass('footer-nav__list-link--active');
         $('.footer-nav__sub-list').toggleClass('footer-nav__sub-list--show');
     });
-
 
     // настройка слайдера Последние новости
     $('.responsive-last-news-slider').slick({
@@ -81,7 +78,6 @@ $(document).ready(function() {
         ]
     });
 
-
     // настройка слайдера Наши объекты
     $('.our-objects-slider').slick({
         dots: false,
@@ -112,17 +108,15 @@ $(document).ready(function() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
+                    centerMode: true,
+                    centerPadding: '15px',
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToShow: 2
                 }
             }
         ]
@@ -145,17 +139,13 @@ $(document).ready(function() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToShow: 2
                 }
             }
         ]
