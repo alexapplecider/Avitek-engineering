@@ -101,22 +101,25 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
-        variableWidth: true,
         prevArrow: '.slider-buttons__prev--what-we-do',
         nextArrow: '.slider-buttons__next--what-we-do',
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    centerMode: true,
-                    centerPadding: '15px',
-                    slidesToShow: 2
+                    slidesToShow: 2,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1,
                 }
             }
         ]
@@ -139,13 +142,19 @@ $(document).ready(function() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1,
                 }
             }
         ]

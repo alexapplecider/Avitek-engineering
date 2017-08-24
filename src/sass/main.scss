@@ -1003,10 +1003,19 @@ a:hover {
                 font-weight: 500;
             }
         }
+        &-slider {
+            max-width: 100%;
+            @media (max-width: $tablet) {
+                max-width: 600px;
+            } 
+            @media (max-width: $mobile) {
+                max-width: 100%;
+            }  
+        }
         &__slide {
-            width: 260px;
-            // width: 100%;
-            // margin-right: 30px;
+            max-width: 260px;
+            width: 100%;
+            margin-right: 30px;
             &-img {
                 margin-bottom: 15px;
             }
@@ -1040,8 +1049,18 @@ a:hover {
                 font-weight: 500;
             }
         }
+        &-slider {
+            max-width: 100%;
+            @media (max-width: $tablet) {
+                max-width: 600px;
+            } 
+            @media (max-width: $mobile) {
+                max-width: 100%;
+            }  
+        }
         &__slide {
-            width: 260px;
+            max-width: 260px;
+            width: 100%;
             margin-right: 30px;
             &-img {
                 margin-bottom: 15px;
