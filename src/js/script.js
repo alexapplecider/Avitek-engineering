@@ -43,12 +43,6 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
@@ -61,20 +55,11 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
                 breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -103,21 +88,14 @@ $(document).ready(function() {
         arrows: true,
         prevArrow: '.slider-buttons__prev--what-we-do',
         nextArrow: '.slider-buttons__next--what-we-do',
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 320,
+                breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
                 }
@@ -135,24 +113,16 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
-        variableWidth: true,
         prevArrow: '.slider-buttons__prev--our-team',
         nextArrow: '.slider-buttons__next--our-team',
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 320,
+                breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
                 }

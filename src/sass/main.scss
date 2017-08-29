@@ -343,11 +343,10 @@ a:hover {
         }
     }
     &__last-news {
-        max-width: 440px; // width: 100%;
-        flex-basis: 100%;
+        width: 430px; // width: 100%;
+        // flex-basis: 100%;
         @media (max-width: $tablet) {
-            flex-wrap: wrap;
-            max-width: 90%;
+            width: 100%;
             margin: 0 auto;
         }
         @media (max-width: 480px) {
@@ -439,36 +438,17 @@ a:hover {
     }
 }
 
-.slider {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    overflow: hidden;
-    margin: 0 auto;
-    @media (max-width: 600px) {
-        width: 420px;
-    }
-    @media (max-width: 480px) {
-        max-width: 447px; // width: 100%;
-        flex-basis: 100%;
-    }
-    @media (max-width: 400px) {
-        width: 300px;
-    }
-    @media (max-width: $mobile) {
-        width: 250px;
+.responsive-last-news-slider {
+    margin: 0 -15px;
+    & .slick-slide {
+        margin: 0 15px;
     }
 }
 
 .slide-news {
-    max-width: 200px; // width: 100%;
-    flex-basis: 100%;
-    margin: 0 10px;
+    // width: 200px; 
     border: 1px solid #ebebeb;
     padding-bottom: 10px;
-    @media (max-width: 480px) {
-        max-width: 100%;
-    }
     &__img {
         display: block;
         width: 100%;
@@ -510,7 +490,7 @@ a:hover {
         padding-top: 35px;
         padding-bottom: 35px;
     }
-    
+
     &__header {
         margin-bottom: 44px;
         font-size: 2rem;
@@ -981,6 +961,7 @@ a:hover {
     }
 
     .what-we-do {
+        overflow: hidden;
         padding-top: 88px;
         padding-bottom: 88px;
         @media (max-width: $tablet) {
@@ -1004,19 +985,23 @@ a:hover {
             }
         }
         &-slider {
-            max-width: 100%;
-            @media (max-width: $tablet) {
-                max-width: 600px;
-            } 
-            @media (max-width: $mobile) {
-                max-width: 100%;
-            }  
+            margin: 0 -15px;
+            & .slick-slide {
+                margin: 0 15px;
+                @media (max-width: $tablet) {
+                    margin: 0 30px;
+                }
+            }
         }
         &__slide {
-            max-width: 260px;
-            width: 100%;
-            margin-right: 30px;
-            &-img {
+            @media (max-width: $tablet) {
+                margin-right: 100px;
+            }
+            @media (max-width: 600px) {
+                margin-right: 0;
+            }
+            &-img img {
+                width: 100%;
                 margin-bottom: 15px;
             }
             &-text {
@@ -1032,6 +1017,8 @@ a:hover {
     }
 
     .our-team {
+        overflow: hidden;
+
         padding-bottom: 80px;
         &__inner-wrap {
             display: flex;
@@ -1050,19 +1037,17 @@ a:hover {
             }
         }
         &-slider {
-            max-width: 100%;
-            @media (max-width: $tablet) {
-                max-width: 600px;
-            } 
-            @media (max-width: $mobile) {
-                max-width: 100%;
-            }  
+            margin: 0 -15px;
+            & .slick-slide {
+                margin: 0 15px;
+                @media (max-width: $tablet) {
+                    margin: 0 30px;
+                }
+            }
         }
         &__slide {
-            max-width: 260px;
-            width: 100%;
-            margin-right: 30px;
-            &-img {
+            &-img img {
+                width: 100%;
                 margin-bottom: 15px;
             }
             &-title {
