@@ -1,0 +1,39 @@
+section.our-team
+  .container
+    .our-team__inner-wrap
+      h2.our-team__header
+        | Наша 
+        strong команда
+      .slider-buttons
+        button.slider-buttons__prev.slider-buttons__prev--our-team
+          i.fa.fa-chevron-left(aria-hidden='true')
+        button.slider-buttons__next.slider-buttons__next--our-team
+          i.fa.fa-chevron-right(aria-hidden='true')
+    .slider.our-team-slider
+      +our-team-slide([
+      {
+        "img": "img/our-team-man.jpg",
+        "title": "Зиновьев Михаил",
+        "subTitle": "специалист-инженер"
+      },
+      {
+        "img": "img/our-team-man.jpg",
+        "title": "Зиновьев Михаил",
+        "subTitle": "специалист-инженер"
+      },
+      {
+        "img": "img/our-team-man.jpg",
+        "title": "Зиновьев Михаил",
+        "subTitle": "специалист-инженер"
+      },
+      {
+        "img": "img/our-team-man.jpg",
+        "title": "Зиновьев Михаил",
+        "subTitle": "специалист-инженер"
+      },
+      {
+        "img": "img/our-team-man.jpg",
+        "title": "Зиновьев Михаил",
+        "subTitle": "специалист-инженер"
+      }
+      ])

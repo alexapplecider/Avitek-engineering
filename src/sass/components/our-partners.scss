@@ -1,0 +1,36 @@
+.our-partners {
+	padding: 100px 0;
+	@media (max-width: $mobile) {
+		padding: 50px 0;
+	}
+	&__header {
+		font-size: 2rem;
+		margin-bottom: 90px;
+		font-weight: 300;
+		@media (max-width: $mobile) {
+			margin-bottom: 30px;
+		}
+		& strong {
+			font-weight: 500;
+		}
+	}
+	&__images {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		align-items: center;
+		@media (max-width: 400px) {
+			justify-content: space-around;
+		}
+		&-wrap {
+			max-width: 190px;
+			text-align: center; // width: 100%;
+			flex-basis: 100%;
+			margin-bottom: 50px;
+			@media (max-width: $tablet) {
+				max-width: 130px;
+				margin-bottom: 25px;
+			}
+		}
+	}
+}

@@ -38,6 +38,9 @@
   },
   "homepage": "https://github.com/Stilon/Evromed#readme",
   "dependencies": {
-    "jquery.mmenu": "^6.1.5"
+    "gulp-notify": "^3.0.0",
+    "gulp-pug": "^3.3.0",
+    "jquery.mmenu": "^6.1.5",
+    "pug": "^2.0.0-rc.4"
   }
 }

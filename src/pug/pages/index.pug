@@ -1,0 +1,12 @@
+extends ../template/index
+
+block variables
+	- var title = "Главная страница"
+	- var bodyClass = "index"
+
+block content
+	include ../components/about-us-and-news
+	include ../components/our-features
+	include ../components/our-objects
+	include ../components/feedback
+	include ../components/our-partners

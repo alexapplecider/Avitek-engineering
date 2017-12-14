@@ -1,0 +1,50 @@
+.feedback {
+	padding: 75px 0;
+	background: url(../img/feedback-bg.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.feedback-block {
+	max-width: 360px;
+	flex-basis: 100%;
+	background-color: #ffffff;
+	margin: 0 auto;
+	padding-top: 27px;
+	padding-bottom: 50px;
+	text-align: center;
+	@media(max-width: 400px) {
+		max-width: 330px;
+		padding-top: 20px;
+		padding-bottom: 45px;
+	}
+	&__header {
+		margin-bottom: 50px;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	&__form input {
+		display: block;
+		width: 165px;
+		padding: 8px 0;
+		margin: 0 auto;
+		font-size: 1.5rem;
+		border-bottom: 1px solid #9697a1;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&__form input:focus {
+		outline: none;
+	}
+	&__form button {
+		display: inline-block;
+		padding: 10px 38px;
+		font-size: 1.6rem;
+		line-height: 20px;
+		letter-spacing: 1px;
+		color: #ffffff;
+		background-color: #1c96ce;
+		cursor: pointer;
+	}
+}

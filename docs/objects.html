@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <title>О компании</title>
+    <title>Обьекты</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
   </head>
-  <body class="about-company">
+  <body class="objects-page">
     <header class="header">
       <div class="container-full">
         <div class="container">
@@ -96,132 +96,127 @@
       </div>
       <div class="container">
         <div class="header__text">
-          <h1>О компании</h1>
+          <h1>Обьекты</h1>
         </div>
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <section class="history"><img class="history__img" src="img/history-img.jpg" alt="">
-          <h2 class="history__header">История <strong>компании</strong></h2>
-          <p class="history__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</p>
-          <p class="history__text">Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.</p>
-          <p class="history__text">Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.</p>
-        </section>
-        <section class="our-mission">
-          <h2 class="our-mission__header">Наша <strong>миссия</strong></h2>
-          <p class="our-mission__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
-          <p class="our-mission__text">Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.</p>
-          <p class="our-mission__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
-        </section>
-      </div>
-      <section class="our-features">
-        <div class="container">
-          <h2 class="our-features__header">Наши <strong>преимущества</strong></h2>
-          <div class="feature-card">
-            <div class="feature-card__item">
-              <div class="feature-card__item-img"><img src="img/icons/features-1.png" alt=""/></div>
-              <h3 class="feature-card__item-header">Опыт работы</h3>
-              <p class="feature-card__item-text">Мы ведем профессиональную деятельность с 2006 года, оказывая проектные и строительные услуги в сфере инженерных коммуникаций.</p>
-            </div>
-            <div class="feature-card__item">
-              <div class="feature-card__item-img"><img src="img/icons/features-2.png" alt=""/></div>
-              <h3 class="feature-card__item-header">Полный комплект услуг</h3>
-              <p class="feature-card__item-text">Монтажные работы вентиляционных, отопительных,кондициониру-ющих, систем водоснабжения и систем пожаротушения</p>
-            </div>
-            <div class="feature-card__item">
-              <div class="feature-card__item-img"><img src="img/icons/features-3.png" alt=""/></div>
-              <h3 class="feature-card__item-header">Страхование на 60 млн</h3>
-              <p class="feature-card__item-text">Все работы, выполняемые нашей организацией, подлежат комплексному страхованию в крупнейших страховых компаниях.</p>
-            </div>
-            <div class="feature-card__item">
-              <div class="feature-card__item-img"><img src="img/icons/features-4.png" alt=""/></div>
-              <h3 class="feature-card__item-header">Уникальные объекты</h3>
-              <p class="feature-card__item-text">Опыт монтажа и сервисного обслуживания, на особо технически сложных и уникальных объектах</p>
-            </div>
+      <section class="objects">
+        <div class="objects__tabs-wrap">
+          <div class="objects__tabs">
+            <button class="objects__tabs-tablinks" id="defaultOpen" onclick="openTypeObjects(event, 'All')">Все</button>
+            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'Commercial')">Коммерческие</button>
+            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'NotCommercial')">Не коммерческие</button>
+            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'Houses')">Дома</button>
+            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'IndustrialBuilding')">Промышленные здания</button>
           </div>
         </div>
-      </section>
-      <section class="what-we-do">
-        <div class="container">
-          <div class="what-we-do__inner-wrap">
-            <h2 class="what-we-do__header">Что <strong>мы делаем</strong></h2>
-            <div class="slider-buttons">
-              <button class="slider-buttons__prev slider-buttons__prev--what-we-do"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-              <button class="slider-buttons__next slider-buttons__next--what-we-do"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-            </div>
-          </div>
-          <div class="slider what-we-do-slider">
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-1.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Выполняем комплексное техническое обслуживание, диагностику и ремонт систем чиллер-фанкойл и VRF (VRV)<br/><a class="what-we-do__slide-link" href="#">систем кондиционирования</a></p>
-            </div>
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-2.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Проектирование, поставка, монтаж, пуско-наладочные работы и сервисное обслуживание<br/><a class="what-we-do__slide-link" href="#">систем вентиляции</a></p>
-            </div>
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-3.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Проектирование, поставка, монтаж, пуско-наладочные работы и сервисное обслуживание<br/><a class="what-we-do__slide-link" href="#">отопительных систем</a></p>
-            </div>
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-4.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Проектирование, поставка, монтаж, пуско-наладочные работы и сервисное обслуживание<br/><a class="what-we-do__slide-link" href="#">противопожарных систем</a></p>
-            </div>
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-1.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Выполняем комплексное техническое обслуживание, диагностику и ремонт систем чиллер-фанкойл и VRF (VRV)<br/><a class="what-we-do__slide-link" href="#">систем кондиционирования</a></p>
-            </div>
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-2.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Проектирование, поставка, монтаж, пуско-наладочные работы и сервисное обслуживание<br/><a class="what-we-do__slide-link" href="#">систем вентиляции</a></p>
-            </div>
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-3.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Проектирование, поставка, монтаж, пуско-наладочные работы и сервисное обслуживание<br/><a class="what-we-do__slide-link" href="#">отопительных систем</a></p>
-            </div>
-            <div class="what-we-do__slide">
-              <div class="what-we-do__slide-img"><img src="img/what-we-do/what-we-do-img-4.jpg" alt=""/></div>
-              <p class="what-we-do__slide-text">Проектирование, поставка, монтаж, пуско-наладочные работы и сервисное обслуживание<br/><a class="what-we-do__slide-link" href="#">противопожарных систем</a></p>
-            </div>
-          </div>
+        <div class="object__tabs-content" id="All">
+          <ul class="object-list">
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-2.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-3.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-4.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-5.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-6.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-7.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-8.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+          </ul>
         </div>
+        <div class="object__tabs-content" id="Commercial"></div>
+        <div class="object__tabs-content" id="NotCommercial">
+          <ul class="object-list">
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                <div class="link-info">
+                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                </div></a></li>
+          </ul>
+        </div>
+        <div class="object__tabs-content" id="Houses"></div>
+        <div class="object__tabs-content" id="IndustrialBuilding"></div>
       </section>
-      <section class="our-team">
+      <section class="our-partners">
         <div class="container">
-          <div class="our-team__inner-wrap">
-            <h2 class="our-team__header">Наша <strong>команда</strong></h2>
-            <div class="slider-buttons">
-              <button class="slider-buttons__prev slider-buttons__prev--our-team"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-              <button class="slider-buttons__next slider-buttons__next--our-team"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-            </div>
-          </div>
-          <div class="slider our-team-slider">
-            <div class="our-team__slide">
-              <div class="our-team__slide-img"><img src="img/our-team-man.jpg" alt=""/></div>
-              <p class="our-team__slide-title">Зиновьев Михаил</p>
-              <p class="our-team__slide-sub-title">специалист-инженер</p>
-            </div>
-            <div class="our-team__slide">
-              <div class="our-team__slide-img"><img src="img/our-team-man.jpg" alt=""/></div>
-              <p class="our-team__slide-title">Зиновьев Михаил</p>
-              <p class="our-team__slide-sub-title">специалист-инженер</p>
-            </div>
-            <div class="our-team__slide">
-              <div class="our-team__slide-img"><img src="img/our-team-man.jpg" alt=""/></div>
-              <p class="our-team__slide-title">Зиновьев Михаил</p>
-              <p class="our-team__slide-sub-title">специалист-инженер</p>
-            </div>
-            <div class="our-team__slide">
-              <div class="our-team__slide-img"><img src="img/our-team-man.jpg" alt=""/></div>
-              <p class="our-team__slide-title">Зиновьев Михаил</p>
-              <p class="our-team__slide-sub-title">специалист-инженер</p>
-            </div>
-            <div class="our-team__slide">
-              <div class="our-team__slide-img"><img src="img/our-team-man.jpg" alt=""/></div>
-              <p class="our-team__slide-title">Зиновьев Михаил</p>
-              <p class="our-team__slide-sub-title">специалист-инженер</p>
-            </div>
+          <h2 class="our-partners__header">НАШИ<strong> ПАРТНЕРЫ</strong></h2>
+          <div class="our-partners__images">
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-1.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-2.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-3.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-4.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-5.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-6.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-7.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-8.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-9.png" alt=""></div>
+            <div class="our-partners__images-wrap"><img src="img/partners/partner-10.png" alt=""></div>
           </div>
         </div>
       </section>

@@ -1,0 +1,16 @@
+- var partnersImg = ["img/partners/partner-1.png","img/partners/partner-2.png","img/partners/partner-3.png","img/partners/partner-4.png","img/partners/partner-5.png","img/partners/partner-6.png","img/partners/partner-7.png","img/partners/partner-8.png","img/partners/partner-9.png","img/partners/partner-10.png"];
+
+section.our-partners
+	.container
+		h2.our-partners__header
+			| НАШИ
+			strong  ПАРТНЕРЫ
+
+		.our-partners__images
+		
+			each val in partnersImg
+				.our-partners__images-wrap
+					img(src= val, alt='')
+
+
+

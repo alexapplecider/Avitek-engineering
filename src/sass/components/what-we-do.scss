@@ -1,0 +1,55 @@
+.what-we-do {
+	overflow: hidden;
+	padding-top: 88px;
+	padding-bottom: 88px;
+	@media (max-width: $tablet) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	&__inner-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	&__header {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 2rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		& strong {
+			font-weight: 500;
+		}
+	}
+	&-slider {
+		margin: 0 -15px;
+		& .slick-slide {
+			margin: 0 15px;
+			@media (max-width: $tablet) {
+				margin: 0 30px;
+			}
+		}
+	}
+	&__slide {
+		@media (max-width: $tablet) {
+			margin-right: 100px;
+		}
+		@media (max-width: 600px) {
+			margin-right: 0;
+		}
+		&-img img {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+		&-text {
+			font-size: 1.5rem;
+			color: #2b2d42;
+			text-align: left;
+		}
+		&-link {
+			font-weight: 400;
+			text-decoration: underline;
+		}
+	}
+}
