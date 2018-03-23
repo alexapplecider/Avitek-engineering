@@ -4,9 +4,9 @@
     <title>Обьекты</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
   </head>
   <body class="objects-page">
@@ -102,106 +102,108 @@
     </header>
     <main class="main">
       <section class="objects">
-        <div class="objects__tabs-wrap">
-          <div class="objects__tabs">
-            <button class="objects__tabs-tablinks" id="defaultOpen" onclick="openTypeObjects(event, 'All')">Все</button>
-            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'Commercial')">Коммерческие</button>
-            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'NotCommercial')">Не коммерческие</button>
-            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'Houses')">Дома</button>
-            <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'IndustrialBuilding')">Промышленные здания</button>
+        <div class="container">
+          <div class="objects__tabs-wrap">
+            <div class="objects__tabs">
+              <button class="objects__tabs-tablinks" id="defaultOpen" onclick="openTypeObjects(event, 'All')">Все</button>
+              <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'Commercial')">Коммерческие</button>
+              <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'NotCommercial')">Не коммерческие</button>
+              <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'Houses')">Дома</button>
+              <button class="objects__tabs-tablinks" onclick="openTypeObjects(event, 'IndustrialBuilding')">Промышленные здания</button>
+            </div>
           </div>
+          <div class="object__tabs-content" id="All">
+            <ul class="object-list">
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-2.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-3.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-4.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-5.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-6.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-7.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-8.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+            </ul>
+          </div>
+          <div class="object__tabs-content" id="Commercial"></div>
+          <div class="object__tabs-content" id="NotCommercial">
+            <ul class="object-list">
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+              <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
+                  <div class="link-info">
+                    <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
+                    <p class="link-info__text">Обслуживание системы кондиционирования</p>
+                  </div></a></li>
+            </ul>
+          </div>
+          <div class="object__tabs-content" id="Houses"></div>
+          <div class="object__tabs-content" id="IndustrialBuilding"></div>
         </div>
-        <div class="object__tabs-content" id="All">
-          <ul class="object-list">
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-2.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-3.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-4.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-5.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-6.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-7.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-8.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-          </ul>
-        </div>
-        <div class="object__tabs-content" id="Commercial"></div>
-        <div class="object__tabs-content" id="NotCommercial">
-          <ul class="object-list">
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-            <li class="object-list__item"><a class="object-list__link" href="#"><img src="img/objects/obj-1.png" alt=""/>
-                <div class="link-info">
-                  <h2 class="link-info__title">ГОСТИНИЦА СЕВЕРНАЯ</h2>
-                  <p class="link-info__text">Обслуживание системы кондиционирования</p>
-                </div></a></li>
-          </ul>
-        </div>
-        <div class="object__tabs-content" id="Houses"></div>
-        <div class="object__tabs-content" id="IndustrialBuilding"></div>
       </section>
       <section class="our-partners">
         <div class="container">
@@ -279,8 +281,8 @@
         </div>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>

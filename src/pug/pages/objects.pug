@@ -6,120 +6,121 @@ block variables
 
 block content
 	section.objects
-		.objects__tabs-wrap
-			.objects__tabs
-				button.objects__tabs-tablinks(id="defaultOpen" onclick="openTypeObjects(event, 'All')") Все
-				button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'Commercial')") Коммерческие
-				button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'NotCommercial')") Не коммерческие
-				button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'Houses')") Дома
-				button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'IndustrialBuilding')") Промышленные здания
+		.container
+			.objects__tabs-wrap
+				.objects__tabs
+					button.objects__tabs-tablinks(id="defaultOpen" onclick="openTypeObjects(event, 'All')") Все
+					button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'Commercial')") Коммерческие
+					button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'NotCommercial')") Не коммерческие
+					button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'Houses')") Дома
+					button.objects__tabs-tablinks(onclick="openTypeObjects(event, 'IndustrialBuilding')") Промышленные здания
 
-		.object__tabs-content(id="All")
-			ul.object-list
-				+objectItems([
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-2.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-3.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-4.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-5.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-6.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-7.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-8.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				}
-				])
-		.object__tabs-content(id="Commercial")
-		.object__tabs-content(id="NotCommercial")
-			ul.object-list
-				+objectItems([
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				{
-					"title": "ГОСТИНИЦА СЕВЕРНАЯ",
-					"text": "Обслуживание системы кондиционирования",
-					"img": "img/objects/obj-1.png",
-					"href": "#",
-				},
-				])
-		.object__tabs-content(id="Houses")
-		.object__tabs-content(id="IndustrialBuilding")
+			.object__tabs-content(id="All")
+				ul.object-list
+					+objectItems([
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-2.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-3.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-4.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-5.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-6.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-7.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-8.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					}
+					])
+			.object__tabs-content(id="Commercial")
+			.object__tabs-content(id="NotCommercial")
+				ul.object-list
+					+objectItems([
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					{
+						"title": "ГОСТИНИЦА СЕВЕРНАЯ",
+						"text": "Обслуживание системы кондиционирования",
+						"img": "img/objects/obj-1.png",
+						"href": "#",
+					},
+					])
+			.object__tabs-content(id="Houses")
+			.object__tabs-content(id="IndustrialBuilding")
 
 	include ../components/our-partners

@@ -32,6 +32,7 @@
 		}
 	}
 	&__slide {
+		outline: none;
 		@media (max-width: $tablet) {
 			margin-right: 100px;
 		}
