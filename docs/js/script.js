@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	// кнопка мобильного меню
 	var mobMenuButton = $('.mobile-menu__btn'),
-		mobMenuBlock = $('.mobile-menu-nav-list');
+			mobMenuBlock = $('.mobile-menu-nav-list');
 	$('.mobile-menu__btn').on('click', function (event) {
 		mobMenuBlock.toggleClass('mobile-menu-nav-list--show');
 	});
@@ -16,8 +16,7 @@ $(document).ready(function () {
 
 	// настройка списков в футере
 	var footerListLink = $('.footer-nav__list-link');
-	footerListSubList = $('.footer-nav__sub-list');
-
+			footerListSubList = $('.footer-nav__sub-list');
 	$('.footer-nav__list-link').on('click', function (event) {
 		event.preventDefault();
 		$('.footer-nav__list-link').toggleClass('footer-nav__list-link--active');
@@ -129,7 +128,22 @@ $(document).ready(function () {
 			}
 		]
 	});
+
+	// Scroll to Top button
+	$(".btnScroll").click(function() {
+		$("body").animate({ "scrollTop": 0}, 1000);
+		$("html").animate({ "scrollTop": 0}, 1000);
+	});
+	$(window).scroll(function() {
+		if( $(window).scrollTop() > 250 ){ 
+			$(".btnScroll").addClass("btnActive");
+		} else {
+			$(".btnScroll").removeClass("btnActive");		
+		}
+	})
+
 });
+
 
 // Табы на странице Обьекты
 function openTypeObjects(evt, cityName) {

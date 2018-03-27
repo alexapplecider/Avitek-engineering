@@ -1,8 +1,8 @@
 // Global
 @import "global/fonts";
 @import "global/normalize";
-@import "global/scaffolding";
 @import "global/general";
+@import "global/scaffolding";
 // Components
 @import "components/header-index";
 @import "components/header";
@@ -179,7 +179,7 @@ a:hover {
 			margin: 0;
 		}
 		@media(max-width: 400px) {
-			width: 250px;
+			// width: 250px;
 			margin: 0 auto;
 		}
 		& .slick-slide {

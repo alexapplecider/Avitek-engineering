@@ -160,7 +160,7 @@
 		&__item {
 			position: relative;
 			@media (max-width: $tablet) {
-				margin-bottom: 35px;
+				margin-bottom: 27px;
 			}
 			&:first-child:hover .drop-menu {
 				display: flex;
@@ -210,7 +210,6 @@
 		}
 	}
 	.mobile-menu {
-		display: none;
 		@media (max-width: 600px) {
 			display: block;
 			width: 50px;
@@ -227,10 +226,9 @@
 			}
 		}
 		&-nav-list {
-			display: none; // position: absolute;
 			position: fixed;
 			top: 0;
-			right: 0;
+			right: -9999;
 			bottom: 0;
 			min-width: 65vw;
 			overflow: auto; // height: 100vh;
@@ -242,6 +240,7 @@
 			padding-top: 30px;
 			padding-left: 30px;
 			z-index: 100;
+			transition: .3s all;
 			@media (max-width: $mobile) {
 				font-size: 1.2rem;
 			}
@@ -251,7 +250,8 @@
 				padding-left: 15px;
 			}
 			&--show {
-				display: block;
+				right: 0;
+				transition: .3s all;
 			}
 			& .mobile-menu__btn--open {
 				position: absolute;
@@ -261,7 +261,7 @@
 				padding: 10px;
 			}
 			&__item {
-				margin-bottom: 30px;
+				margin-bottom: 10px;
 				@media (max-width: $mobile) {
 					margin-bottom: 20px;
 				}
