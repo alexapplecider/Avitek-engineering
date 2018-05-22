@@ -14,15 +14,6 @@ $(document).ready(function () {
 		$('.mobile-menu-drop').slideToggle(100);
 	});
 
-	// настройка списков в футере
-	var footerListLink = $('.footer-nav__list-link');
-			footerListSubList = $('.footer-nav__sub-list');
-	$('.footer-nav__list-link').on('click', function (event) {
-		event.preventDefault();
-		$('.footer-nav__list-link').toggleClass('footer-nav__list-link--active');
-		$('.footer-nav__sub-list').toggleClass('footer-nav__sub-list--show');
-	});
-
 	// настройка слайдера Последние новости
 	$('.responsive-last-news-slider').slick({
 		dots: false,
@@ -60,6 +51,20 @@ $(document).ready(function () {
 				}
 			}
 		]
+	});
+
+	// настройка слайдера Отзывы
+	$('.reviews-slider').slick({
+		dots: false,
+		infinite: true,
+		speed: 400,
+		autoplay: false,
+		autoplaySpeed: 8000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow: '.slider-buttons__prev--reviews',
+		nextArrow: '.slider-buttons__next--reviews'
 	});
 
 	// настройка слайдера Наши объекты
@@ -141,26 +146,37 @@ $(document).ready(function () {
 			$(".btnScroll").removeClass("btnActive");		
 		}
 	})
-
 });
 
 
-// Табы на странице Обьекты
-function openTypeObjects(evt, cityName) {
-	// Declare all variables
-	var i, tabcontent, tablinks;
-	// Get all elements with class="tabcontent" and hide them
-	tabcontent = document.getElementsByClassName("object__tabs-content");
-	for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-	}
-	// Get all elements with class="tablinks" and remove the class "active"
-	tablinks = document.getElementsByClassName("objects__tabs-tablinks");
-	for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" objects__tabs-tablinks--active", "");
-	}
-	// Show the current tab, and add an "active" class to the button that opened the tab
-	document.getElementById(cityName).style.display = "flex";
-	evt.currentTarget.className += " objects__tabs-tablinks--active";
+const footerLink = document.querySelectorAll(".footer-nav__list-link");
+for(let i of footerLink) {
+	i.addEventListener('click', openFooterList);
 }
-document.getElementById("defaultOpen").click();
+function openFooterList(event) {
+	event.preventDefault();
+	const target = event.target;
+	const list = target.nextElementSibling;
+	list.classList.toggle('footer-nav__sub-list--show');
+}
+
+
+const sliderButtons = document.querySelectorAll('.slider-buttons button');
+for(let i of sliderButtons) {
+	i.addEventListener('click', changeButtonColor);
+}
+function changeButtonColor(event) {
+	const target = event.currentTarget;
+	if( target.classList.contains('slider-buttons__prev') ) {
+		target.classList.add('slick-arrow--active');
+		target.nextElementSibling.classList.remove('slick-arrow--active');
+	} else if ( target.classList.contains('slider-buttons__next') ) {
+		target.classList.add('slick-arrow--active');
+		target.previousElementSibling.classList.remove('slick-arrow--active');
+	}
+}
+
+
+$('#aniimated-thumbnials').lightGallery({
+	thumbnail:true
+});

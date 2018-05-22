@@ -12,6 +12,7 @@ html(lang="ru-RU")
 		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet")
 		//- link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
 		link(rel="stylesheet" type="text/css" href="css/slick.css")
+		link(rel="stylesheet" type="text/css" href="css/lightgallery.min.css")
 		link(rel="stylesheet" type="text/css" href="css/main.min.css")
 
 	body(class="" + bodyClass)
@@ -24,4 +25,9 @@ html(lang="ru-RU")
 		script(src="js/jquery-3.1.1.min.js")
 		//- script(src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript")
 		script(src="js/slick.min.js" type="text/javascript")
+		script(src="js/lightgallery.min.js" type="text/javascript")
+		
+		if title === "Объекты"
+			script(src="js/tabs.js" type="text/javascript")
+			
 		script(src="js/script.js" type="text/javascript")

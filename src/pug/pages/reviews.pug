@@ -1,0 +1,68 @@
+extends ../template/main
+
+block variables
+  - var title = "Отзывы"
+  - var bodyClass = "reviews-page"
+
+block content
+  section.reviews
+    .container
+      .reviews__inner-wrap
+        h2.reviews__header
+          | Клиенты
+          strong   о нас
+        .slider-buttons
+          button.slider-buttons__prev.slider-buttons__prev--reviews
+            i.fa.fa-chevron-left(aria-hidden='true')
+          button.slider-buttons__next.slider-buttons__next--reviews.slick-arrow--active
+            i.fa.fa-chevron-right(aria-hidden='true')
+
+      .slider.reviews-slider
+
+        .reviews-slide
+          #aniimated-thumbnials
+            a(href='img/reviews/1.png')
+              .img-wrap
+                img(src='img/reviews/1.png')
+              span Благодарственное письмо от ООО «Арх Проект-3»
+            a(href='img/reviews/2.png')
+              .img-wrap
+                img(src='img/reviews/2.png')
+              span Благодарственное письмо от «ТТ ВКО»
+            a(href='img/reviews/3.png')
+              .img-wrap
+                img(src='img/reviews/3.png')
+              span Благодарственное письмо от ООО Арх Проект-2
+            a(href='img/reviews/4.png')
+              .img-wrap
+                img(src='img/reviews/4.png')
+              span Благодарственное письмо от ООО Арх Проект-2
+            a(href='img/reviews/5.png')
+              .img-wrap
+                img(src='img/reviews/5.png')
+              span Почётная грамота партнёра от компании «APEX metal»
+            a(href='img/reviews/6.png')
+              .img-wrap
+                img(src='img/reviews/6.png')
+              span Благодарственное письмо от ООО КЖС МОСИ 1
+            a(href='img/reviews/7.png')
+              .img-wrap
+                img(src='img/reviews/7.png')
+              span Благодарственное письмо от Торговая компания ОПТИМУС
+        
+        .reviews-slide
+          #aniimated-thumbnials
+            a(href='img/reviews/5.png')
+              .img-wrap
+                img(src='img/reviews/5.png')
+              span Почётная грамота партнёра от компании «APEX metal»
+            a(href='img/reviews/6.png')
+              .img-wrap
+                img(src='img/reviews/6.png')
+              span Благодарственное письмо от ООО КЖС МОСИ 1
+            a(href='img/reviews/7.png')
+              .img-wrap
+                img(src='img/reviews/7.png')
+              span Благодарственное письмо от Торговая компания ОПТИМУС
+
+  include ../components/our-partners

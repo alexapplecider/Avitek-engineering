@@ -4,6 +4,7 @@ $c-second: #fff;
 $c-bg-main: #1e7874;
 $c-bg-second: #1c8a85;
 $c-bg-third: #186068;
+
 //Типографика
 $f-main: "Roboto", "Arial", sans-serif;
 $f-second: "Montserrat", "Arial", sans-serif;
@@ -19,10 +20,10 @@ body {
 	color: $c-main;
 }
 
-// Breakpoints container
 $desktop: 1170px;
 $tablet: 768px;
 $mobile: 320px;
+
 // Breakpoints container
 .container {
 	max-width: $desktop;
